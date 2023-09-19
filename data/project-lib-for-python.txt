@@ -1,0 +1,124 @@
+project-lib for Python
+Last updated: May 15, 2023
+If you need to interact with your Watson Studio projects and project assets from a notebook, you can use the project-lib library for Python. The library is like a programmatical interface to a project.
+By using the project-lib library for Python, you can access project metadata and assets, including files and connections. The library also contains functions that simplify fetching files associated with the project.
+Note:
+ - The project-lib functions do not encode or decode data when saving data to or getting data from a file.
+ - The project-lib functions can't be used to access connected folder assets (files on a path in Cloud Object Storage).
+Use the library
+The project-lib library for Python is pre-installed and can be imported directly in a notebook in the notebook editor. To use the project-lib library in your notebook, you need the ID of the project and the project token.
+To insert the project token to your notebook:
+	1	Click the More icon on your notebook toolbar and then click Insert project token. If a project token exists, a cell is added to your notebook with the following information:
+from project_lib import Project
+project = Project(sc,"<ProjectId>","<ProjectToken>")
+	1	sc is the Spark context if Spark is used. <ProjectId> is the ID of your project and <ProjectToken> is the value of the project token. If you are told in a message that no project token exists, click the link in the message to be redirected to the project's Access Control page where you can create a project token. You must be eligible to create a project token. For details, see Manually adding the project token. To create a project token:
+	1	From the Manage tab, select the Access Control page, and click New access token under Access tokens.
+	2	Enter a name, select Editor role for the project, and create a token.
+	3	Go back to your notebook, click the More icon on the notebook toolbar and then click Insert project token.
+The project-lib functions
+The instantiated project object that is created after you have imported the project-lib library exposes a set of functions that are grouped in the following way:
+ - Fetch project information
+ - Fetch files
+ - Save data
+ - Read data from a connection
+ - Fetch connected data
+Fetch project information
+You can use the following functions to fetch project-related information programmatically:
+ - get_name() This function returns the name of the project.
+ - get_description() This function returns the description of the project.
+ - get_metadata() This function returns the project metadata.
+ - get_storage_metadata() This function returns the metadata of the object storage associated with the project.
+ - get_project_bucket_name() This function returns the project bucket name in the associated object storage. All project files are stored in this bucket.
+ - get_files() This function returns the list of the files in your project. Each element in the returned list contains the ID and the name of the file. The list of returned files is not sorted by any criterion and can change when you call the function again.
+ - get_assets() This function returns a list of all project assets. You can pass the optional parameter asset_type to the function get_assets which allows you to filter assets by type. The accepted values for this parameter are data_asset, connection and asset. The value asset returns all of the assets in your project. For example, to get only the data assets, use the function get_assets("data_asset").
+ - get_connections() This function returns a list of the connections you have in your project. Each element in the returned list contains the ID and the name of the connection.
+Fetch files
+You can use the following functions to fetch files stored in the object storage associated with your project.
+You can fetch files in two ways:
+ - get_file_url(file_name) where file_name is the name of the file you want to fetch. This function returns the URL to fetch a file from the object storage using Spark. The URL is constructed based on the type of object storage associated with the project. Hadoop configurations are set up automatically when you interact with the object storage of your project. The following example shows you how to use this function to fetch data from the object storage using Spark:
+# Import the lib
+from project_lib import Project
+project = Project(sc,"<ProjectId>", "<ProjectToken>")
+
+# Get the url
+url = project.get_file_url("myFile.csv")
+
+# Fetch the CSV file from the object storage using Spark
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.getOrCreate()
+df_data_1 = spark.read\
+  .format('org.apache.spark.sql.execution.datasources.csv.CSVFileFormat')\
+  .option('header', 'true')\
+  .load(url)
+df_data_1.show(5)
+get_file(file_name) where file_name is the name of the file you want to fetch.
+This function fetches a file from the object storage into the memory of the running kernel. The function returns a byte buffer which can be used to bind into kernel-specific data structures, for example, a pandas DataFrame. This method of fetching files is not recommended for very large files.
+The following example shows you how to fetch a file and read the data into a pandas DataFrame:
+# Import the lib
+from project_lib import Project
+project = Project(sc,"<ProjectId>", "<ProjectToken>")
+
+# Fetch the file
+my_file = project.get_file("myFile.csv")
+
+# Read the CSV data file from the object storage into a pandas DataFrame
+my_file.seek(0)
+import pandas as pd
+pd.read_csv(my_file, nrows=10)
+Save data
+You can use the following function to save data to the object storage associated with your project. The data will be added as a file to the project bucket in the associated Cloud Object Storage. This function does multiple things. Firstly, it puts the data into the object storage and then it adds this data as a data asset to your project so you can see the data that you saved as a file in the data assets list in your project.
+save_data(file_name, data, set_project_asset=True, overwrite=False)
+The function takes the following parameters:
+ - file_name: the name of the created file.
+ - data: the data to upload. This can be any object of type file-like-object, for example, byte buffers or string buffers.
+ - set_project_asset[optional]: adds the file to the project as a data asset after the data was successfully uploaded to the object storage. It takes a boolean value and the value true is set by default.
+ - overwrite[optional]: overwrites the file if the file already exists in the object storage or the project. By default it is set to false.
+Here is an example, which shows you how you can save data to a file in the object storage:
+# Import the lib
+from project_lib import Project
+project = Project(sc,"<ProjectId>", "<ProjectToken>")
+
+# let's assume you have the pandas DataFrame  pandas_df which contains the data
+# you want to save in your object storage as a csv file
+project.save_data("file_name.csv", pandas_df.to_csv(index=False))
+
+# the function returns a dict which contains the asset_id, bucket_name and file_name
+# upon successful saving of the data
+Read data from a connection
+You can use the following function to get the metadata (credentials) of a given connection.
+get_connection: the function takes as input the ID of the connection or the name of the connection. You can get these values by using the get_assets() function which returns the id, name and type of all the assets listed in project.
+The function get_connection returns the connection credentials which you can use to fetch data from the connection data source.
+Here is an example, which shows you how you can fetch the credentials of a connection by using the get_connection function:
+# Import the lib
+from project_lib import Project
+    project = Project(sc,"<ProjectId>", "<ProjectToken>")
+
+conn_creds = project.get_connection(name="<ConnectionName>")
+If your connection is a connection to dashDB for example, you can fetch your data by running the following code:
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.getOrCreate()
+
+host_url = "jdbc:db2://{}:{}/{}".format(conn_creds["host"], "50000", conn_creds["database"])
+data_df = spark.read.jdbc(host_url, table="<TableName>", properties={"user": conn_creds["username"], "password": conn_creds["password"]})
+data_df.show()
+
+Fetch connected data
+You can use the following function to fetch the credentials of connected data. The function returns a dictionary that contains the connection credentials in addition to a datapath attribute that points to specific data in that connection, for example, a table in a dashDB instance or a database in a Cloudant instance.
+get_connected_data: this function takes as input the ID of the connected data or the name of the connected data. You can get these values by using the get_assets() function which returns the id, name and type of all the assets listed in project.
+Here is an example, which shows you how to fetch the credentials of connected data in a dashDB instance by using the get_connected_data function:
+# Import the lib
+from project_lib import Project
+project = Project(sc,"<ProjectId>", "<ProjectToken>")
+
+creds = project.get_connected_data(name="<ConnectedDataName>")
+# creds is a dictionary that has the connection credentials in addition to
+# a datapath that references a specific table in the database
+# creds: {'database': 'DB_NAME',
+# 'datapath': '/DASH11846/SAMPLE_TABLE',
+# 'host': 'dashdb-entry-yp-dal09-07.services.dal.bluemix.net',
+# 'password': 'XXXX',
+# 'sg_service_url': 'https://sgmanager.ng.bluemix.net',
+# 'username': 'XXXX'}
+Learn more
+See a demo of these functions in a blog post.
+Parent topic: Loading and accessing data in a notebook

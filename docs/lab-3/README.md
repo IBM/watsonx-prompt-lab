@@ -40,7 +40,7 @@ Summarize this topic from the Cloud Pak for Data docs: <a href="https://dataplat
   
 **Text content**
 
-Text to use: [project-lib-for-python.txt](../data/project-lib-for-python.txt)
+Text to use: [project-lib-for-python.txt](/data/project-lib-for-python.txt)
 
 See: [Example answer](prompt-with-content-exercises-answers.md#1-summarize-documentation-topic)
 
