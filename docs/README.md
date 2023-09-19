@@ -1,6 +1,6 @@
 # Introduction
 
-## Workshop Title
+## Prompt Engineering with watsonx
 
 Welcome to our workshop! In this workshop we'll be using foo to accomplish bar. The goals of this workshop are:
 
@@ -18,10 +18,12 @@ The introductory page of the workshop is broken down into the following sections
 
 ## Agenda
 
-|  |  |
-| :--- | :--- |
-| [Lab 0: Pre-work](pre-work/README.md) | Pre-work for the project |
-| [Lab 1: Some Title](lab-1/README.md) | Exercise to do the thing |
+|                                                                           |  |
+|:--------------------------------------------------------------------------| :--- |
+| [Lab 0: Pre-work](pre-work/README.md)                                     | Pre-work for the project |
+| [Lab 1: Basics of Prompt Engineering](lab-1/README.md)                    | Exercise to do the thing |
+| [Lab 2: Creating prompts in watsonx.ai's Prompt Builder](lab-2/README.md) | Exercise to do the thing |
+| [Lab 3: Creating prompts with content](lab-3/README.md)                   | Exercise to do the thing |
 
 ## Compatibility
 
