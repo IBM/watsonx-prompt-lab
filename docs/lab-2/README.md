@@ -1,79 +1,37 @@
 # Creating prompts in watsonx.ai's Prompt Builder
 
-Complete the following exercies using Watsonx.ai's Prompt Builder.
+Complete the following exercises using watsonx.ai's Prompt Builder.
 
 **Exercises**
-<table>
-<tr>
-<td><a href="#1-generate">1. Generate</a></td>
-<td>Write three sentences about donkeys</td>
-</tr>
-<tr>
-<td><a href="#2-rewrite">2. Rewrite</a></td>
-<td>Transform Markdown to HTML</td>
-</tr>
-<tr>
-<td><a href="#3-summarize">3. Summarize</a></td>
-<td>Summarize a short story</td>
-</tr>
-<tr>
-<td><a href="#4-summary-points">4. Summary points</a></td>
-<td>Create a list of topics from a meeting transcript</td>
-</tr>
-<tr>
-<td><a href="#5-study-questions">5. Study questions</a></td>
-<td>Anticipate potential customer questions</td>
-</tr>
-<tr>
-<td><a href="#6-text-extraction">6. Text extraction</a></td>
-<td>Extract verbs from a sentence</td>
-</tr>
-<tr>
-<td><a href="#7-compare">7. Compare</a></td>
-<td>Identify what passages have in common</td>
-</tr>
-<tr>
-<td><a href="#8-text-search">8. Text search</a></td>
-<td>Find which page contains the sought-after text</td>
-</tr>
-<tr>
-<td><a href="#9-classify">9. Classify</a></td>
-<td>Detect chatbot users' intent</td>
-</tr>
-<tr>
-<td><a href="#10-anomaly-detection">10. Anomaly detection</a></td>
-<td>Spot the odd entry out</td>
-</tr>
-<tr>
-<td><a href="#11-math-question">11. Math question</a></td>
-<td>How many minutes are there in a day?</td>
-</tr>
-<tr>
-<td><a href="#12-write-like-shakespeare">12. Write like Shakespeare</a></td>
-<td>Rewrite a passage like Shakespeare</td>
-</tr>
-</table>
 
-<p>&nbsp;</p>
+| No. |                       Exercise                       |                      Summary                      |
+|-----|:----------------------------------------------------:|:-------------------------------------------------:|
+| 1   |               [Generate](#1-generate)                |        Write three sentences about donkeys        |
+| 2   |                [Rewrite](#2-rewrite)                 |            Transform Markdown to HTML             |
+| 3   |              [Summarize](#3-summarize)               |              Summarize a short story              |
+| 4   |         [Summary points](#4-summary-points)          | Create a list of topics from a meeting transcript |
+| 5   |        [Study questions](#5-study-questions)         |      Anticipate potential customer questions      |
+| 6   |        [Text extraction](#6-text-extraction)         |           Extract verbs from a sentence           |
+| 7   |                [Compare](#7-compare)                 |       Identify what passages have in common       |
+| 8   |            [Text search](#8-text-search)             |  Find which page contains the sought-after text   |
+| 9   |               [Classify](#9-classify)                |           Detect chatbot users' intent            |
+| 10  |      [Anomaly detection](#10-anomaly-detection)      |              Spot the odd entry out               |
+| 11  |          [Math question](#11-math-question)          |       How many minutes are there in a day?        |
+| 12  | [Write like Shakespeare](#12-write-like-shakespeare) |        Rewrite a passage like Shakespeare         |
 
+# 1. Generate
 
-## 1. Generate
-**Goal** 
-<table>
-<tr>
-<td>
-Write three sentences about donkeys
-</td>
-</tr>
-</table>
-  
-**Samples**
+### Write three sentences about donkeys.
+
+Use the samples below to help.
+
 ```
 3 sentences about puppies:
 - The puppy spun in circles, trying to catch his tail, but ended up tumbling over and over.
 - His antics had his owners laughing out loud, and even the other puppies at the park stopped to watch the silly sight.
 - As soon as the two puppies met at the park, their tails began to wag and they bounded around each other with glee.
 ```
+
 ```
 3 sentences about kittens:
 - The little kitten lapped up the milk with her tiny pink tongue, making a cute slurping sound.
@@ -81,22 +39,15 @@ Write three sentences about donkeys
 - As soon as the package was opened, the little kitten's eyes lit up with excitement.
 ```
 
-See: [Example answer](prompt-engineering-exercise-answers.md#1-generate)
-
-<p>&nbsp;</p>
-
+<details> 
+<summary> Show example answer </summary>
+<img src="../images/answer-01-generate.png" alt="Answer" /> 
+</details>
 
 ## 2. Rewrite
-**Goal** 
-<table>
-<tr>
-<td>
-Transform one of these Markdown passages to HTML
-</td>
-</tr>
-</table>
 
-**Markdown passages**
+Transform one of the following Markdown passages to HTML.
+
 ```
 ## Background
 The [IBM Watson Natural Language Processing library](https://dataplatform.cloud.ibm.com/docs/
@@ -122,22 +73,17 @@ Even the creators of LLMs cannot always fully anticipate or explain these models
 article/02/03/2023/how-chatgpt-inadvertently-learned-to-avoid-talking-about-trump)
 ```
 
-See: [Example answer](prompt-engineering-exercise-answers.md#2-rewrite)
+<details> 
+<summary> Show example answer </summary>
+<img src="../images/answer-02-rewrite.png" alt="Answer" />
+</details>
 
 <p>&nbsp;</p>
 
 
 ## 3. Summarize
-**Goal** 
-<table>
-<tr>
-<td>
-Summarize one of these short stories
-</td>
-</tr>
-</table>
-  
-**Short stories**
+
+Summarize one of the following short stories.
 
 ```
 A little bird chirped as she gathered twigs and bits of moss in her beak, flitting back and 
@@ -163,22 +109,15 @@ day, new friendships had been formed, and both the dogs and their owners left th
 happy hearts and wagging tails.
 ```
 
-See: [Example answer](prompt-engineering-exercise-answers.md#3-summarize)
-
-<p>&nbsp;</p>
-
+<details> 
+<summary> Show example answer </summary>
+<img src="../images/answer-03-summarize.png" alt="Answer" />
+</details>
 
 ## 4. Summary points
-**Goal** 
-<table>
-<tr>
-<td>
-Create a list of topics from one of these meeting transcripts
-</td>
-</tr>
-</table>
 
-**Transcripts**
+Create a list of topics from one of the following meeting transcripts.
+
 ```
 00:00   [sam]   I wanted to share an update on project X today.
 00:15   [sam]   Project X will be completed at the end of the week.
@@ -208,24 +147,16 @@ Create a list of topics from one of these meeting transcripts
 01:29   [alex]  I like this plan.  Let's have a party!
 ```
 
-See: [Example answer](prompt-engineering-exercise-answers.md#4-summary-points)
-
-<p>&nbsp;</p>
-
+<details> 
+<summary> Show example answer </summary>
+<img src="../images/answer-04-summary-points.png" alt="Answer" />
+</details>
 
 ## 5. Study questions
-**Goal** 
-<table>
-<tr>
-<td>
-Create a list of questions a customer might have about one of these topic passages
-</td>
-</tr>
-</table>
 
-**Topic passages**
+Create a list of possible questions a customer could ask about one of the following topic passages.
 
-[Creating notebooks](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/creating-notebooks.html)
+[Creating Notebooks](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/creating-notebooks.html)
 ```
 You can add a notebook to your project by using one of these methods: creating a notebook file, 
 copying a sample notebook from the Gallery, or adding a notebook from a catalog. You must have 
@@ -238,29 +169,23 @@ Spark in your R scripts and Shiny apps by accessing Spark kernels programmatical
 the sparklyr package to connect to Spark from R. The sparklyr package includes a dplyr interface
 to Spark data frames as well as an R interface to Spark’s distributed machine learning pipelines.
 ```
-[AutoAI overview](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai-overview.html)
+[AutoAI Overview](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai-overview.html)
 ```
 The AutoAI graphical tool in Watson Studio analyzes your data and discovers data transformations, 
 algorithms, and parameter settings that work best for your predictive modeling problem. AutoAI 
 displays the results as model candidate pipelines ranked on a leaderboard for you to choose from.
 ```
 
-See: [Example answer](prompt-engineering-exercise-answers.md#5-study-questions)
-
-<p>&nbsp;</p>
+<details> 
+<summary> Show example answer </summary>
+<img src="../images/answer-05-study-questions.png" alt="Answer" />
+</details>
 
 
 ## 6. Text extraction
-**Goal** 
-<table>
-<tr>
-<td>
-Extract verbs from one of these sentences
-</td>
-</tr>
-</table>
 
-**Sentences**
+Extract the verbs from one of the following sentences.
+
 ```
 As soon as the two dogs met at the park, their tails began to wag and they bounded 
 around each other with glee.
@@ -276,22 +201,16 @@ As soon as the package was opened, the little cat's eyes lit up with excitement.
 She pounced on the new toy, batting it around the room with joyous abandon.
 ```
 
-See: [Example answer](prompt-engineering-exercise-answers.md#6-text-extraction)
-
-<p>&nbsp;</p>
+<details> 
+<summary> Show example answer </summary>
+<img src="../images/answer-06-text-extraction.png" alt="Answer" />
+</details>
 
 
 ## 7. Compare
-**Goal** 
-<table>
-<tr>
-<td>
-Choose one pair of passages and identify what the passages have in common
-</td>
-</tr>
-</table>
 
-**Passage pairs**
+Choose one pair of passages and identify what the two have in common.
+
 ```
 "The little bird spent days gathering twigs, leaves, and feathers, carefully 
 crafting her new home. When she finally settled into her cozy nest, she felt a 
@@ -331,78 +250,81 @@ braying in alarm as it flew too close to his face. He stumbled backward and
 tripped over his own hooves, earning a few giggles from the nearby chickens."
 ```
 
-See: [Example answer](prompt-engineering-exercise-answers.md#7-compare)
-
-<p>&nbsp;</p>
+<details> 
+<summary> Show example answer </summary>
+<img src="../images/answer-07-compare.png" alt="Answer" />
+</details>
 
 
 ## 8. Text search
-**Goal** 
-<table>
-<tr>
-<td>
-Find which page contains the sought-after text
-</td>
-</tr>
-</table>
 
-**Pages to search**
+Find which page contains the text provided.
+
 ```
 Page 1: "A little bird chirped as she gathered twigs and bits of moss in her beak, flitting back and forth between the trees."
 Page 2: "With each trip, her nest took shape, becoming cozier and more inviting."
 Page 3: "And soon enough, she had created a snug home to raise her brood of chirping chicks."
 ```
-**Sample search terms**
+
+Sample text:
 ```
 cozier
 little
 enough
 ```
 
-See: [Example answer](prompt-engineering-exercise-answers.md#8-text-search)
-
-<p>&nbsp;</p>
-
+<details> 
+<summary> Show example answer </summary>
+<img src="../images/answer-08-text-search.png" alt="Answer" />
+</details>
 
 ## 9. Classify
-**Goal** 
-<table>
-<tr>
-<td>
-Detect chatbot users' intent
-</td>
-</tr>
-</table>
 
-**Class samples**<br/>
-[Sample data source](https://github.com/spackows/CASCON-2017_Analyzing_chat/blob/master/sample-data/sample-NLC-training-data.csv)
+Classify the users' intent like a chatbot would. Examples of user intent classes are provided below. 
 
-Class: "hi"
+Class: `hi`
 ```
 Hello
+
 Hi there
+
 Good evening
+
 Hi
+
 Hi good morning
 ```
-Class: "question"
+
+Class: `question`
 ```
 Hi I wanted to know how to export data from python notebooks?
+
 Hi there can i recover a deleted notebook?
+
 Hi how do you add a folder of files to a project?
+
 Hi team How can you change the name of a Notebook?
+
 How to upload a dataset from local to RStudio
+
 Good morning can you help me upload a shapefile?
+
 How to start creating R notebook?
 ```
-Class: "problem"
+
+Class: `problem`
 ```
 Hi cant login today with this err The owners accout is not active. This might be caused by expired membership.
+
 I am not able to register my account need your help
+
 Hi I got the message failed to prepare Object-Storage. Would you please give me a suggestion. Thank you.
+
 Hi I am trying to request a new API access key but I dont know what the ID should be for me
+
 When I try to add a model to any project I get an Unauthorized error.
 ```
+
 **Test input**
 ```
 Hi  Anyone there?
@@ -414,22 +336,17 @@ Having issues setup WML service
 Hi team how can i import data into a project?
 ```
 
-See: [Example answer](prompt-engineering-exercise-answers.md#9-classify)
+<details> 
+<summary> Show example answer </summary>
+<img src="../images/answer-09-classify.png" alt="Answer" />
+</details>
 
-<p>&nbsp;</p>
 
 
 ## 10. Anomaly detection
-**Goal** 
-<table>
-<tr>
-<td>
-Spot the odd entry out
-</td>
-</tr>
-</table>
 
-**Data set**
+Spot the odd entry out in the following dataset.
+
 ```
 1: "donkey"
 2: "donkey"
@@ -439,50 +356,39 @@ Spot the odd entry out
 6: "donkey"
 ```
 
-See: [Example answer](prompt-engineering-exercise-answers.md#10-anomaly-detection)
-
-<p>&nbsp;</p>
+<details> 
+<summary> Show example answer </summary>
+<img src="../images/answer-10-anomaly-detection.png" alt="Answer" />
+</details>
 
 
 ## 11. Math question
-**Goal** 
-<table>
-<tr>
-<td>
-How many minutes are there in a day?
-</td>
-</tr>
-</table>
 
-See: [Example answer](prompt-engineering-exercise-answers.md#11-math-question)
+Figure out the answer to the question "how many minutes are there in a day?"
 
-<p>&nbsp;</p>
+<details> 
+<summary> Show example answer </summary>
+<img src="../images/answer-11-question-answer.png" alt="Answer" />
+</details>
 
 
 ## 12. Write like Shakespeare
-**Goal** 
-<table>
-<tr>
-<td>
-Rewrite this story in the style of Shakespeare
-</td>
-</tr>
-</table>
 
-**Story**
+Rewrite the following story in the style of Shakespeare.
+
 ```
 Despite their love for each other, the young couple's relationship was doomed from
 the start. Friends and family stood in the way, fueling a tragic misunderstanding 
 that ultimately led to their heartbreaking separation.
 ```
 
-See: [Example answer](prompt-engineering-exercise-answers.md#12-write-like-shakespeare)
-
-<p>&nbsp;</p>
+<details> 
+<summary> Show example answer </summary>
+<img src="../images/answer-12-shakespeare.png" alt="Answer" />
+</details>
 
 
 ## Note
-All of the sentences and stories - about birds, puppies, kittens, donkeys, and shakespeare - were generated using chatGPT.
+All the sentences and stories - about birds, puppies, kittens, donkeys, and shakespeare - were generated using ChatGPT.
 
-<p>&nbsp;</p>
 
