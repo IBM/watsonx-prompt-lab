@@ -148,7 +148,7 @@ The descriptions above provide a good introduction to model parameters. However,
 
 ### 3.1 Try different models
 
-The watsonx.ai documentation describes the available models: [watsonx.ai models](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-models.html?context=wx&audience=wdp)
+The watsonx.ai documentation describes the available models: [watsonx.ai models](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-models.html?context=wx&audience=wdp).
 
 <img src="../images/3.png" width="80%" alt="prompt" />
 
