@@ -1,40 +1,25 @@
-# Introduction
+## Prompt Engineering with watsonx.ai
 
-## Prompt Engineering with watsonx
+Welcome! The goals of this workshop are the following:
 
-Welcome to our workshop! In this workshop we'll be using foo to accomplish bar. The goals of this workshop are:
-
-* Goals!
-* Have fun!
+* Gain a comprehensive understanding of prompt engineering
+* Learn techniques to achieve the best results with Large Language Models
+* Apply learnings through completion of a diverse set of prompt engineering exercises
 
 ### About this workshop
 
-The introductory page of the workshop is broken down into the following sections:
+Part art, part science, prompt engineering is the process of crafting input text to fine-tune a given large language model for best effect.
 
-* [Agenda](./#agenda)
-* [Compatibility](./#compatibility)
-* [Technology Used](./#technology-used)
-* [Credits](./#credits)
+Foundation models have billions of parameters and are trained on terabytes of data to perform a variety of tasks, including text-, code-, or image generation, classification, conversation, and more. A subset known as large language models are used for text- and code-related tasks. When it comes to prompting these models, there isn't just one right answer. There are multiple ways to prompt them for a successful result.
+
+In this workshop, you will learn the basics of prompt engineering, from monitoring your token usage to balancing intelligence and security. You will be guided through a range of exercises where you will be able to utilize the different techniques, dials, and levers illustrated in order to get the output you desire from the model. Participants of this workshop will be equipped with a comprehensive understanding of prompt engineering along with the practical skills required to achieve the best results with large language models.
+
 
 ## Agenda
 
-|                                                                           |  |
-|:--------------------------------------------------------------------------| :--- |
-| [Lab 0: Pre-work](pre-work/README.md)                                     | Pre-work for the project |
-| [Lab 1: Basics of Prompt Engineering](lab-1/README.md)                    | Exercise to do the thing |
-| [Lab 2: Creating prompts in watsonx.ai's Prompt Builder](lab-2/README.md) | Exercise to do the thing |
-| [Lab 3: Creating prompts with content](lab-3/README.md)                   | Exercise to do the thing |
-
-## Compatibility
-
-This workshop has been tested on the following platforms:
-
-* **osName**: version X, version Y
-
-## Technology Used
-
-* Brief Description
-
-## Credits
-
-* [Full Name](https://github.com/githubid)
+|                                                            |                           |
+|:-----------------------------------------------------------|:--------------------------|
+| [Lab 0: Pre-work](pre-work/README.md)                      | Registration and Setup    |
+| [Lab 1: The Basics of Prompt Engineering](lab-1/README.md) | Introduction and Examples |
+| [Lab 2: Apply What You Learned](lab-2/README.md)           | Basic Exercises           |
+| [Lab 3: Think Outside of the Box](lab-3/README.md)         | Advanced Exercises        |
