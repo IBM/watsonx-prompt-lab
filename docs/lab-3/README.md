@@ -14,7 +14,7 @@
 
 Summarize the [`project-lib` library](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/project-lib-python.html) from the Cloud Pak for Data documentation. A file containing the text for the site is provided [here]((/data/project-lib-for-python.txt)).
 
-<details> 
+<details>
 <summary> Show example answer </summary>
 <img src="../images/week-3-answer-01-summarize.png" alt="Answer" />
 </details>
@@ -24,7 +24,7 @@ Summarize the [`project-lib` library](https://dataplatform.cloud.ibm.com/docs/co
 
 List summarizing bullet points for the [`project-lib` library](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/project-lib-python.html).
 
-<details> 
+<details>
 <summary> Show example answer </summary>
 <img src="../images/week-3-answer-02-summary-points.png" alt="Answer" />
 </details>
@@ -33,7 +33,7 @@ List summarizing bullet points for the [`project-lib` library](https://dataplatf
 
 Generate study questions for the [`project-lib` library](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/project-lib-python.html).
 
-<details> 
+<details>
 <summary> Show example answer </summary>
 <img src="../images/week-3-answer-03-study-questions.png" alt="Answer" />
 </details>
@@ -42,11 +42,12 @@ Generate study questions for the [`project-lib` library](https://dataplatform.cl
 
 Answer questions about the [`project-lib` library](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/project-lib-python.html).
 
-<details> 
+<details>
 <summary> Show example answer </summary>
 <img src="../images/week-3-answer-04-answer-questions.png" alt="Answer" />
 </details>
 
 
 
+<img src="https://count.asgharlabs.io/count?p=/lab3_promptlab_page">
 

@@ -23,3 +23,5 @@ In this workshop, you will learn the basics of prompt engineering, from monitori
 | [Lab 1: The Basics of Prompt Engineering](lab-1/README.md) | Introduction and Examples |
 | [Lab 2: Apply What You Learned](lab-2/README.md)           | Basic Exercises           |
 | [Lab 3: Think Outside of the Box](lab-3/README.md)         | Advanced Exercises        |
+
+<img src="https://count.asgharlabs.io/count?p=/main_promptlab_page">

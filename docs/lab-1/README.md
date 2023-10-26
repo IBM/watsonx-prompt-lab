@@ -24,7 +24,7 @@ list ideas to start a dog-walking business?
 
 We can see from the example that simple prompts do not work with smaller LLMs.
 
-### 1.3 Cue the output structure 
+### 1.3 Cue the output structure
 To improve the response, we can start by addressing its structure. Include a cue to start the response in the desired structure to receive a structured response. For example, just adding the two characters `1.` to the end of our original prompt can dramatically improve the response:
 
 <img src="../images/1.2.png" width="80%" alt="prompt" />
@@ -46,7 +46,7 @@ List ideas to start a lemonade business:
 3. Arrange for a celebrity to endorse the lemonade
 
 List ideas to start a dog-walking business:
-1. 
+1.
 ```
 
 ### 1.5 Include descriptive details
@@ -72,7 +72,7 @@ List ideas to start a lemonade business:
 3. Arrange for a celebrity to endorse the lemonade
 
 List ideas to start a dog-walking business:
-1. 
+1.
 ```
 
 ### 2.1 Set the min and max tokens
@@ -110,7 +110,7 @@ If the response is too generic or going on wild tangents, consider adjusting the
 
 _Decoding_ is the process of finding the output sequence given the input sequence:
 
-- _Greedy decoding_ selects the word with the highest probability at each step of the decoding process. 
+- _Greedy decoding_ selects the word with the highest probability at each step of the decoding process.
 - _Sampling decoding_ selects words from a probability distribution at each step:
   - _Temperature_ refers to selecting high- or low-probability words. Higher temperature values lead to more variability.
   - _Top-p_ (nucleus sampling) refers to selecting the smallest set of words whose cumulative probability exceeds _p_å.
@@ -137,11 +137,11 @@ You could try to increase the temperature to resolve the problem, however, when 
 
 <img src="../images/2.4-1.png" width="85%" alt="Repetative penalty" />
 
-One of the many challenges of prompt engineering is exposed in the example above: bullet points are a type of repetition that we want. In this case, penalizing repetition might work against you too. 
+One of the many challenges of prompt engineering is exposed in the example above: bullet points are a type of repetition that we want. In this case, penalizing repetition might work against you too.
 
 ### 2.5 Additional reading on model parameters
 
-While we provided you with an introduction to model parameters, this  
+While we provided you with an introduction to model parameters, this
 The descriptions above provide a good introduction to model parameters. However, [this third-party blog post on model parameters](https://txt.cohere.com/llm-parameters-best-outputs-language-ai) provides excellent additional examples and visualizations of how model parameters work to help you better understand the concepts.
 
 # General Tips
@@ -159,13 +159,13 @@ LLMs have great potential, but they do not have logic, knowledge, or domain expe
 If your prompt includes all the tips and best practices discussed here, yet you're not getting satisfactory results from any of the models, take time to consider whether LLMs actually suit your use case. For example, although we can get reasonable results for simple arithmetic, [LLMs generally cannot handle math well](https://venturebeat.com/business/researchers-find-that-large-language-models-struggle-with-math/)
 
 # Balancing intelligence and security
-With great artificial intelligence comes higher security risks. Solutions like ChatGPT are known as _Very Large language Models_ (VLLMs) with 175 billion parameters. They are fine-tuned by the OpenAI team using an additional non-public Chat datasets along with Reinforcement Learning Human Feedback (RLHF) dataset. It is a chatbot-enabled LLM. 
+With great artificial intelligence comes higher security risks. Solutions like ChatGPT are known as _Very Large language Models_ (VLLMs) with 175 billion parameters. They are fine-tuned by the OpenAI team using an additional non-public Chat datasets along with Reinforcement Learning Human Feedback (RLHF) dataset. It is a chatbot-enabled LLM.
 
-In watsonx.ai, we are interacting directly with smaller LLMs (3-20 billion parameters).  This is a wise choice with regard to security. Prompt injection is a major risk for enterprise-use of LLMs. In prompt injections, a hacker will create an intricate prompt in order to cause a LLM such as ChatGPT to ignore/bypass security protocols and reveal sensitive company information. 
+In watsonx.ai, we are interacting directly with smaller LLMs (3-20 billion parameters).  This is a wise choice with regard to security. Prompt injection is a major risk for enterprise-use of LLMs. In prompt injections, a hacker will create an intricate prompt in order to cause a LLM such as ChatGPT to ignore/bypass security protocols and reveal sensitive company information.
 
 Just imagine you're a hacker. Which model would you choose to target for prompt injection hacking? OpenAI's ChatGPT with 175 billion parameters capable of thousands of tasks or a smaller, more-focused 3 billion parameter model highly tuned for a few isolated tasks?  Which has a larger attack surface for prompt (re-)engineering?
 
-The smaller, simpler models in watsonx.ai present a more difficult challenge for potential hackers. Using many small models rather than a single large one such as ChatGPT creates a wider distribution of sensitive entry points. Each small language model is much harder to manipulate due their limited functionality and high level of prompt engineering that was required to perform their primary tasks. They don’t have the wide range of functions such as ChatGPT.  As programmers know, putting all your resources into a single point of failure is unwise. It's far better to decompose your solution for security, scalability, and control. 
+The smaller, simpler models in watsonx.ai present a more difficult challenge for potential hackers. Using many small models rather than a single large one such as ChatGPT creates a wider distribution of sensitive entry points. Each small language model is much harder to manipulate due their limited functionality and high level of prompt engineering that was required to perform their primary tasks. They don’t have the wide range of functions such as ChatGPT.  As programmers know, putting all your resources into a single point of failure is unwise. It's far better to decompose your solution for security, scalability, and control.
 
 
 # Further learning
@@ -173,3 +173,6 @@ The smaller, simpler models in watsonx.ai present a more difficult challenge for
 - [Tips for writing foundation model prompts](https://www.ibm.com/docs/en/watsonx-as-a-service?topic=models-prompt-tips)
 - [Open source models in watsonx.ai](https://www.ibm.com/blog/ibm-watsonx-ai-open-source-pre-trained-foundation-models-make-ai-and-automation-easier-than-ever-before/)
 - [Prompt engineering tutorial](https://txt.cohere.com/llm-parameters-best-outputs-language-ai)
+
+<img src="https://count.asgharlabs.io/count?p=/lab1_promptlab_page">
+

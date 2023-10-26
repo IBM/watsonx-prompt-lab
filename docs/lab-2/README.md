@@ -39,9 +39,9 @@ Use the samples below to help.
 - As soon as the package was opened, the little kitten's eyes lit up with excitement.
 ```
 
-<details> 
+<details>
 <summary> Show example answer </summary>
-<img src="../images/answer-01-generate.png" alt="Answer" /> 
+<img src="../images/answer-01-generate.png" alt="Answer" />
 </details>
 
 ## 2. Rewrite
@@ -51,29 +51,29 @@ Transform one of the following Markdown passages to HTML.
 ```
 ## Background
 The [IBM Watson Natural Language Processing library](https://dataplatform.cloud.ibm.com/docs/
-content/wsj/analyze-data/watson-nlp.html) is a Python library that provides basic natural 
-language processing (NLP) such as syntax analysis and keyword extraction with out-of-the-box, 
-pre-trained models. The Watson NLP library also makes it simple to customize the language 
+content/wsj/analyze-data/watson-nlp.html) is a Python library that provides basic natural
+language processing (NLP) such as syntax analysis and keyword extraction with out-of-the-box,
+pre-trained models. The Watson NLP library also makes it simple to customize the language
 models with dictionaries of your domain-specific terms.
 ```
 ```
-[MURAL](https://mural.co) is an online tool that is like a virtual whiteboard: you can draw 
-shapes, stick notes, and move things around. It’s a fabulous tool for visually organizing ideas, 
+[MURAL](https://mural.co) is an online tool that is like a virtual whiteboard: you can draw
+shapes, stick notes, and move things around. It’s a fabulous tool for visually organizing ideas,
 designing solutions, and collaborating with teammates — in real time or asynchronously.
 ```
 ```
 ## Function
-Using LLMs is pretty easy: prompt the model with text (eg. "I took my dog") and the model 
+Using LLMs is pretty easy: prompt the model with text (eg. "I took my dog") and the model
 generates text as output (eg. "for a walk").
 ```
 ```
 ## Hall of shame: when LLMs go wrong
-Even the creators of LLMs cannot always fully anticipate or explain these models' output: 
+Even the creators of LLMs cannot always fully anticipate or explain these models' output:
 [ChatGPT's creators can’t figure out why it won’t talk about Trump](https://www.semafor.com/
 article/02/03/2023/how-chatgpt-inadvertently-learned-to-avoid-talking-about-trump)
 ```
 
-<details> 
+<details>
 <summary> Show example answer </summary>
 <img src="../images/answer-02-rewrite.png" alt="Answer" />
 </details>
@@ -86,30 +86,30 @@ article/02/03/2023/how-chatgpt-inadvertently-learned-to-avoid-talking-about-trum
 Summarize one of the following short stories.
 
 ```
-A little bird chirped as she gathered twigs and bits of moss in her beak, flitting back and 
-forth between the trees. With each trip, her nest took shape, becoming cozier and more inviting. 
+A little bird chirped as she gathered twigs and bits of moss in her beak, flitting back and
+forth between the trees. With each trip, her nest took shape, becoming cozier and more inviting.
 And soon enough, she had created a snug home to raise her brood of chirping chicks.
 ```
 ```
-As soon as the package was opened, the little cat's eyes lit up with excitement. She pounced 
-on the new toy, batting it around the room with joyous abandon. With a contented purr, she 
+As soon as the package was opened, the little cat's eyes lit up with excitement. She pounced
+on the new toy, batting it around the room with joyous abandon. With a contented purr, she
 snuggled up with her toy, feeling grateful for the love and attention of her caring owner.
 ```
 ```
-The ship heaved and tossed on the angry sea as the storm raged on. Waves as tall as mountains 
-crashed against the hull, threatening to capsize the vessel. But the captain and crew held 
-steady, navigating the treacherous waters with skill and determination, until finally, the 
+The ship heaved and tossed on the angry sea as the storm raged on. Waves as tall as mountains
+crashed against the hull, threatening to capsize the vessel. But the captain and crew held
+steady, navigating the treacherous waters with skill and determination, until finally, the
 storm subsided and the ship emerged triumphant, battered but unbroken.
 ```
 ```
-As soon as the two dogs met at the park, their tails began to wag and they bounded around 
-each other with glee. Their owners struck up a conversation, and soon found that they had 
-much in common, bonding over their shared love of dogs and the outdoors. By the end of the 
-day, new friendships had been formed, and both the dogs and their owners left the park with 
+As soon as the two dogs met at the park, their tails began to wag and they bounded around
+each other with glee. Their owners struck up a conversation, and soon found that they had
+much in common, bonding over their shared love of dogs and the outdoors. By the end of the
+day, new friendships had been formed, and both the dogs and their owners left the park with
 happy hearts and wagging tails.
 ```
 
-<details> 
+<details>
 <summary> Show example answer </summary>
 <img src="../images/answer-03-summarize.png" alt="Answer" />
 </details>
@@ -147,7 +147,7 @@ Create a list of topics from one of the following meeting transcripts.
 01:29   [alex]  I like this plan.  Let's have a party!
 ```
 
-<details> 
+<details>
 <summary> Show example answer </summary>
 <img src="../images/answer-04-summary-points.png" alt="Answer" />
 </details>
@@ -158,25 +158,25 @@ Create a list of possible questions a customer could ask about one of the follow
 
 [Creating Notebooks](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/creating-notebooks.html)
 ```
-You can add a notebook to your project by using one of these methods: creating a notebook file, 
-copying a sample notebook from the Gallery, or adding a notebook from a catalog. You must have 
+You can add a notebook to your project by using one of these methods: creating a notebook file,
+copying a sample notebook from the Gallery, or adding a notebook from a catalog. You must have
 the Admin or Editor role in the project to create a notebook.
 ```
 [Using Spark in RStudio](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/rstudio-spark.html)
 ```
-Although the RStudio IDE cannot be started in a Spark with R environment runtime, you can use 
+Although the RStudio IDE cannot be started in a Spark with R environment runtime, you can use
 Spark in your R scripts and Shiny apps by accessing Spark kernels programmatically. RStudio uses
 the sparklyr package to connect to Spark from R. The sparklyr package includes a dplyr interface
 to Spark data frames as well as an R interface to Spark’s distributed machine learning pipelines.
 ```
 [AutoAI Overview](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai-overview.html)
 ```
-The AutoAI graphical tool in Watson Studio analyzes your data and discovers data transformations, 
-algorithms, and parameter settings that work best for your predictive modeling problem. AutoAI 
+The AutoAI graphical tool in Watson Studio analyzes your data and discovers data transformations,
+algorithms, and parameter settings that work best for your predictive modeling problem. AutoAI
 displays the results as model candidate pipelines ranked on a leaderboard for you to choose from.
 ```
 
-<details> 
+<details>
 <summary> Show example answer </summary>
 <img src="../images/answer-05-study-questions.png" alt="Answer" />
 </details>
@@ -187,11 +187,11 @@ displays the results as model candidate pipelines ranked on a leaderboard for yo
 Extract the verbs from one of the following sentences.
 
 ```
-As soon as the two dogs met at the park, their tails began to wag and they bounded 
+As soon as the two dogs met at the park, their tails began to wag and they bounded
 around each other with glee.
 ```
 ```
-Their owners struck up a conversation, and soon found that they had much in common, 
+Their owners struck up a conversation, and soon found that they had much in common,
 bonding over their shared love of dogs and the outdoors.
 ```
 ```
@@ -201,7 +201,7 @@ As soon as the package was opened, the little cat's eyes lit up with excitement.
 She pounced on the new toy, batting it around the room with joyous abandon.
 ```
 
-<details> 
+<details>
 <summary> Show example answer </summary>
 <img src="../images/answer-06-text-extraction.png" alt="Answer" />
 </details>
@@ -212,45 +212,45 @@ She pounced on the new toy, batting it around the room with joyous abandon.
 Choose one pair of passages and identify what the two have in common.
 
 ```
-"The little bird spent days gathering twigs, leaves, and feathers, carefully 
-crafting her new home. When she finally settled into her cozy nest, she felt a 
-sense of pride and contentment, knowing she had created a safe haven for 
+"The little bird spent days gathering twigs, leaves, and feathers, carefully
+crafting her new home. When she finally settled into her cozy nest, she felt a
+sense of pride and contentment, knowing she had created a safe haven for
 herself and her future chicks."
 
-"The little bird tried to carry a twig that was too big for her, and she 
-ended up tumbling backward, legs sticking up in the air. Her feathered friends 
-tweeted with laughter, and the little bird joined in, knowing that sometimes 
+"The little bird tried to carry a twig that was too big for her, and she
+ended up tumbling backward, legs sticking up in the air. Her feathered friends
+tweeted with laughter, and the little bird joined in, knowing that sometimes
 even the best-laid plans can go awry."
 ```
 ```
-"The little kitten lapped up the milk with her tiny pink tongue, making a cute 
-slurping sound. Her fuzzy face was covered in a white mustache, and she let 
+"The little kitten lapped up the milk with her tiny pink tongue, making a cute
+slurping sound. Her fuzzy face was covered in a white mustache, and she let
 out a tiny purr of contentment as she finished her meal."
 
-"The little kitten nibbled on the treat, savoring every morsel of the delicious 
-flavor. Her big round eyes widened with delight, and she purred contentedly, 
+"The little kitten nibbled on the treat, savoring every morsel of the delicious
+flavor. Her big round eyes widened with delight, and she purred contentedly,
 grateful for the simple pleasure of a yummy snack."
 ```
 ```
-"The puppy spun in circles, trying to catch his tail, but ended up tumbling 
-over and over. His antics had his owners laughing out loud, and even the other 
+"The puppy spun in circles, trying to catch his tail, but ended up tumbling
+over and over. His antics had his owners laughing out loud, and even the other
 dogs at the park stopped to watch the silly sight."
 
-"The dog chased after the ball, wagging his tail with excitement. His owner 
-threw the ball again and again, and the dog happily retrieved it each time, 
+"The dog chased after the ball, wagging his tail with excitement. His owner
+threw the ball again and again, and the dog happily retrieved it each time,
 barking with joy."
 ```
 ```
-"The naughty donkey nudged the gate open with his nose and ran out into the 
-meadow, braying with delight. His owner shook his head in amusement, knowing 
+"The naughty donkey nudged the gate open with his nose and ran out into the
+meadow, braying with delight. His owner shook his head in amusement, knowing
 that the playful donkey always found a way to bring a smile to his face."
 
-"The mischievous donkey chased after the butterfly, but ended up 
-braying in alarm as it flew too close to his face. He stumbled backward and 
+"The mischievous donkey chased after the butterfly, but ended up
+braying in alarm as it flew too close to his face. He stumbled backward and
 tripped over his own hooves, earning a few giggles from the nearby chickens."
 ```
 
-<details> 
+<details>
 <summary> Show example answer </summary>
 <img src="../images/answer-07-compare.png" alt="Answer" />
 </details>
@@ -273,14 +273,14 @@ little
 enough
 ```
 
-<details> 
+<details>
 <summary> Show example answer </summary>
 <img src="../images/answer-08-text-search.png" alt="Answer" />
 </details>
 
 ## 9. Classify
 
-Classify the users' intent like a chatbot would. Examples of user intent classes are provided below. 
+Classify the users' intent like a chatbot would. Examples of user intent classes are provided below.
 
 Class: `hi`
 ```
@@ -336,7 +336,7 @@ Having issues setup WML service
 Hi team how can i import data into a project?
 ```
 
-<details> 
+<details>
 <summary> Show example answer </summary>
 <img src="../images/answer-09-classify.png" alt="Answer" />
 </details>
@@ -356,7 +356,7 @@ Spot the odd entry out in the following dataset.
 6: "donkey"
 ```
 
-<details> 
+<details>
 <summary> Show example answer </summary>
 <img src="../images/answer-10-anomaly-detection.png" alt="Answer" />
 </details>
@@ -366,7 +366,7 @@ Spot the odd entry out in the following dataset.
 
 Figure out the answer to the question "how many minutes are there in a day?"
 
-<details> 
+<details>
 <summary> Show example answer </summary>
 <img src="../images/answer-11-question-answer.png" alt="Answer" />
 </details>
@@ -378,11 +378,11 @@ Rewrite the following story in the style of Shakespeare.
 
 ```
 Despite their love for each other, the young couple's relationship was doomed from
-the start. Friends and family stood in the way, fueling a tragic misunderstanding 
+the start. Friends and family stood in the way, fueling a tragic misunderstanding
 that ultimately led to their heartbreaking separation.
 ```
 
-<details> 
+<details>
 <summary> Show example answer </summary>
 <img src="../images/answer-12-shakespeare.png" alt="Answer" />
 </details>
@@ -391,4 +391,5 @@ that ultimately led to their heartbreaking separation.
 ## Note
 All the sentences and stories - about birds, puppies, kittens, donkeys, and shakespeare - were generated using ChatGPT.
 
+<img src="https://count.asgharlabs.io/count?p=/lab2_promptlab_page">
 
