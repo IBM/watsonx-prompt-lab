@@ -12,7 +12,7 @@
 
 ## 1. Topic Summary
 
-Summarize the [`project-lib` library](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/project-lib-python.html) from the Cloud Pak for Data documentation. A file containing the text for the site is provided [here]((/data/project-lib-for-python.txt)).
+Summarize the [`project-lib` library](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/project-lib-python.html) from the Cloud Pak for Data documentation. A file containing the text for the site is provided [here](/data/project-lib-for-python.txt).
 
 <details>
 <summary> Show example answer </summary>
