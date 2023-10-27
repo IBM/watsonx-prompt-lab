@@ -19,11 +19,9 @@ Complete the following exercises using watsonx.ai's Prompt Builder.
 | 11  |          [Math question](#11-math-question)          |       How many minutes are there in a day?        |
 | 12  | [Write like Shakespeare](#12-write-like-shakespeare) |        Rewrite a passage like Shakespeare         |
 
-# 1. Generate
+## 1. Generate
 
-### Write three sentences about donkeys.
-
-Use the samples below to help.
+Write three sentences about donkeys using the samples below to help.
 
 ```
 3 sentences about puppies:
