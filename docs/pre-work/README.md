@@ -7,7 +7,9 @@ Let's get prepare our environment to work through the Prompt Engineering lab.
 
 ## 1. Connect to watsonx.ai
 
-You will use the [watsonx.ai](https://www.ibm.com/products/watsonx-ai) UI for this lab, so ensure that you can log into it. To sign up, click "Start your free trial" and follow the instructions. You'll be able to use your free trial for this lab and further self-study, just be mindful of token limits as they vary depending on [pricing tier](https://www.ibm.com/products/watsonx-data/pricing).
+You will use the [watsonx.ai](https://www.ibm.com/products/watsonx-ai) Prompt Lab UI for this workshop, so ensure that you can access it. To sign up, click "Start your free trial" and follow the instructions. You'll be able to use your free trial for this lab and further self-study, just be mindful of token limits as they vary depending on [pricing tier](https://www.ibm.com/products/watsonx-data/pricing).
+
+![img.png](../images/free-trial.png)
 
 ## 2. Create a sandbox project in watsonx.ai
 

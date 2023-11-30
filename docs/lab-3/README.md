@@ -5,7 +5,7 @@
 | No. |                Exercise                 |                         Summary                          |
 |-----|:---------------------------------------:|:--------------------------------------------------------:|
 | 1   |            [Topic Summary]()            |     Create a short summary of a documentation topic      |
-| 2   |   [Listed Topic Summary](#2-rewrite)    | Create a list of summary points for a documentation topi |
+| 2   |   [Listed Topic Summary](#2-rewrite)    | Create a list of summary points for a documentation topic |
 | 3   |     [Study Questions](#3-summarize)     |   Create a list of questions for a documentation topic   |
 | 4   | [Question Answering](#4-summary-points) |       Answer questions about a documentation topic       |
 
