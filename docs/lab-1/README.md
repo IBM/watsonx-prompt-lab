@@ -1,13 +1,13 @@
 # Basics of Prompt Engineering
 
-**Note:** The following images show actual results from watsonx.ai. The slight gray text is what we provided to the model.  The blue highlighted text is how the model responded.
+**Note:** The following images show actual results from watsonx.ai. The gray text is what we provided to the model. The blue highlighted text is how the model responded.
 
 ### 1.0 LLM Foundations
-Before we jump into exploring the capabilities of watsonx.ai, we first need to lay a foundation for how Large Language Models (LLMs) work, and how we can tune the model and parameters to change their output. Gaining this understanding will make us more effective prompt engineers.
+Before we jump into exploring the capabilities of Prompt Lab, we first need to lay a foundation for how Large Language Models (LLMs) work, and how we can tune the model and parameters to change their output. Gaining this understanding will make us more effective prompt engineers.
 
 <img src="../images/0.1.png" width="80%" alt="prompt" />
 
-When you open up watsonx.ai and click the `Freeform` mode-option, this is what you will be shown. The large central text area is the prompt editor. On the right-side, you can display the model parameters that you can use to select to optimize how the model responds to your prompt. On the bottom-left, is a summary of the number of tokens used by your prompt during execution.
+When you open up Prompt Lab and click the `Freeform` mode-option, this is what you will be shown. The large central text area is the prompt editor. On the right-side, you can display the model parameters that you can use to select to optimize how the model responds to your prompt. On the bottom-left, is a summary of the number of tokens used by your prompt during execution.
 
 ### 1.1 Tokens
 
@@ -17,7 +17,7 @@ It is important to monitor your token usage to know how much information you are
 
 ### 1.2 Everything is text completion
 
-watsonx.ai is not a chatbot interface, so just specifying an instruction or question rarely produces a good result. For instance, what if we ask watsonx.ai to
+This is not a chatbot interface, so just specifying an instruction or question rarely produces a good result. For instance, what if we prompt the model to
 list ideas to start a dog-walking business?
 
 <img src="../images/1.1.png" width="80%" alt="prompt" />
@@ -51,7 +51,7 @@ List ideas to start a dog-walking business:
 
 ### 1.5 Include descriptive details
 
-The more guidance, the better. Below, we add more detail to the prompt.
+The more guidance, the better. Below, we add more detail to the prompt, such as the number of ideas we want and adjectives describing the business.
 
 <img src="../images/list-ideas-04.png" width="80%" alt="prompt" />
 
@@ -62,7 +62,7 @@ The first change we can make is the model (LLM) we use to evaluate our prompt. T
 
 In general, some models perform better working with summarization, keywords, and semantics, while other models do better with structured text such as HTML, markdown, or JSON. The best way to figure out which models apply for your use case is to simply test them, but it is important to know that choice of model can make a big difference.
 
-watsonx.ai also provides multiple parameters for configuring how LLMs respond to a prompt.  Selecting the correct parameters can often be more of an art than a science, but investing time into understanding them will be rewarded by better responses.
+Prompt Lab also provides multiple parameters for configuring how LLMs respond to a prompt.  Selecting the correct parameters can often be more of an art than a science, but investing time into understanding them will be rewarded by better responses.
 
 Explore these parameters using the same text from earlier:
 ```
@@ -79,8 +79,8 @@ List ideas to start a dog-walking business:
 
 If you're finding the generated text is too short or too long, try adjusting the parameters that control the number of new tokens:
 
-- The `Min tokens` parameter controls the minimum number of tokens (~words) in the generated response.
-- The `Max tokens` parameter controls the maximum number of tokens (~words) in the generated response.
+- The `Min tokens` parameter controls the minimum number of tokens in the generated response.
+- The `Max tokens` parameter controls the maximum number of tokens in the generated response.
 
 <img src="../images/2.1.png" width="80%" alt="prompt" />
 
@@ -113,7 +113,7 @@ _Decoding_ is the process of finding the output sequence given the input sequenc
 - _Greedy decoding_ selects the word with the highest probability at each step of the decoding process.
 - _Sampling decoding_ selects words from a probability distribution at each step:
   - _Temperature_ refers to selecting high- or low-probability words. Higher temperature values lead to more variability.
-  - _Top-p_ (nucleus sampling) refers to selecting the smallest set of words whose cumulative probability exceeds _p_å.
+  - _Top-p_ (nucleus sampling) refers to selecting the smallest set of words whose cumulative probability exceeds _p_.
   - _Top-k_ refers to selecting _k_ words with the highest probabilities at each step.  Higher values lead to more variability.
 
 An advantage of greedy decoding is that you will see reproducible results. This can be useful for testing. Setting temperature to `0` in a sampling decoding approach gives the same variance as greedy decoding.
@@ -122,10 +122,6 @@ An advantage of greedy decoding is that you will see reproducible results. This 
 
 <img src="../images/2.3-1.png" width="80%" alt="prompt" />
 
-Additional reading on decoder methods:
-
-- [Most-used decoder methods](https://medium.com/nlplanet/two-minutes-nlp-most-used-decoding-methods-for-language-models-9d44b2375612)
-- [Using different decoding methods](https://huggingface.co/blog/how-to-generate)
 
 ### 2.4 Add a repetition penalty
 
@@ -139,10 +135,10 @@ You could try to increase the temperature to resolve the problem, however, when 
 
 One of the many challenges of prompt engineering is exposed in the example above: bullet points are a type of repetition that we want. In this case, penalizing repetition might work against you too.
 
-### 2.5 Additional reading on model parameters
+### 2.5 Additional reading on model parameters and decoding methods
 
-While we provided you with an introduction to model parameters, this
-The descriptions above provide a good introduction to model parameters. However, [this third-party blog post on model parameters](https://txt.cohere.com/llm-parameters-best-outputs-language-ai) provides excellent additional examples and visualizations of how model parameters work to help you better understand the concepts.
+- [Foundation model parameters: decoding and stopping criteria](https://www.ibm.com/docs/en/watsonx-as-a-service?topic=lab-model-parameters-prompting)
+- [Using different decoding methods](https://huggingface.co/blog/how-to-generate)
 
 # General Tips
 
@@ -170,9 +166,8 @@ The smaller, simpler models in watsonx.ai present a more difficult challenge for
 
 # Further learning
 
-- [Tips for writing foundation model prompts](https://www.ibm.com/docs/en/watsonx-as-a-service?topic=models-prompt-tips)
-- [Open source models in watsonx.ai](https://www.ibm.com/blog/ibm-watsonx-ai-open-source-pre-trained-foundation-models-make-ai-and-automation-easier-than-ever-before/)
-- [Prompt engineering tutorial](https://txt.cohere.com/llm-parameters-best-outputs-language-ai)
+- [Tips for Writing Foundation Model Prompts: Prompt Engineering](https://www.ibm.com/docs/en/watsonx-as-a-service?topic=models-prompt-tips)
+- [Open Source Models in watsonx.ai](https://www.ibm.com/blog/ibm-watsonx-ai-open-source-pre-trained-foundation-models-make-ai-and-automation-easier-than-ever-before/)
 
 <img src="https://count.asgharlabs.io/count?p=/lab1_promptlab_page">
 

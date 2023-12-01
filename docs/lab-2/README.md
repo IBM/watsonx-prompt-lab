@@ -10,18 +10,16 @@ Complete the following exercises using watsonx.ai's Prompt Builder.
 | 2   |                [Rewrite](#2-rewrite)                 |            Transform Markdown to HTML             |
 | 3   |              [Summarize](#3-summarize)               |              Summarize a short story              |
 | 4   |         [Summary points](#4-summary-points)          | Create a list of topics from a meeting transcript |
-| 5   |        [Study questions](#5-study-questions)         |      Anticipate potential customer questions      |
-| 6   |        [Text extraction](#6-text-extraction)         |           Extract verbs from a sentence           |
-| 7   |                [Compare](#7-compare)                 |       Identify what passages have in common       |
-| 8   |            [Text search](#8-text-search)             |  Find which page contains the sought-after text   |
-| 9   |               [Classify](#9-classify)                |           Detect chatbot users' intent            |
-| 10  |      [Anomaly detection](#10-anomaly-detection)      |              Spot the odd entry out               |
-| 11  |          [Math question](#11-math-question)          |       How many minutes are there in a day?        |
-| 12  | [Write like Shakespeare](#12-write-like-shakespeare) |        Rewrite a passage like Shakespeare         |
+| 5   |        [Text extraction](#6-text-extraction)         |           Extract verbs from a sentence           |
+| 6   |                [Compare](#7-compare)                 |       Identify what passages have in common       |
+| 7   |            [Text search](#8-text-search)             |  Find which page contains the sought-after text   |
+| 8   |               [Classify](#9-classify)                |           Detect chatbot users' intent            |
+| 9  |      [Anomaly detection](#10-anomaly-detection)      |              Spot the odd entry out               |
+| 10  |          [Math question](#11-math-question)          |       How many minutes are there in a day?        |
 
 ## 1. Generate
 
-Write three sentences about donkeys using the samples below to help.
+Get a model to output three creative sentences about doneys. You can use the examples below to help.
 
 ```
 3 sentences about puppies:
@@ -44,7 +42,17 @@ Write three sentences about donkeys using the samples below to help.
 
 ## 2. Rewrite
 
-Transform one of the following Markdown passages to HTML.
+Here's an example of a conversion between Markdown and HTML:
+
+```
+Markdown:
+Welcome to My Blog! I'm thrilled to launch my new blog and share my thoughts with you. Expect a wide range of topics including technology, travel, and growth. Stay tuned for engaging and informative posts!
+
+HTML:
+<h2>Welcome to My Blog!</h2> <p> I'm thrilled to launch my new blog and share my thoughts with you. Expect a wide range of topics including technology, travel, and growth. Stay tuned for engaging and informative posts!</p>
+```
+
+Get a model to output the HTML version of any of the following Markdown snippets. 
 
 ```
 ## Background
@@ -81,7 +89,7 @@ article/02/03/2023/how-chatgpt-inadvertently-learned-to-avoid-talking-about-trum
 
 ## 3. Summarize
 
-Summarize one of the following short stories.
+Get a model to output a short summary of any of the following short stories.
 
 ```
 A little bird chirped as she gathered twigs and bits of moss in her beak, flitting back and
@@ -114,7 +122,7 @@ happy hearts and wagging tails.
 
 ## 4. Summary points
 
-Create a list of topics from one of the following meeting transcripts.
+Prompt a model to create a list of topics from any of the following meeting transcripts.
 
 ```
 00:00   [sam]   I wanted to share an update on project X today.
@@ -150,37 +158,8 @@ Create a list of topics from one of the following meeting transcripts.
 <img src="../images/answer-04-summary-points.png" alt="Answer" />
 </details>
 
-## 5. Study questions
 
-Create a list of possible questions a customer could ask about one of the following topic passages.
-
-[Creating Notebooks](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/creating-notebooks.html)
-```
-You can add a notebook to your project by using one of these methods: creating a notebook file,
-copying a sample notebook from the Gallery, or adding a notebook from a catalog. You must have
-the Admin or Editor role in the project to create a notebook.
-```
-[Using Spark in RStudio](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/rstudio-spark.html)
-```
-Although the RStudio IDE cannot be started in a Spark with R environment runtime, you can use
-Spark in your R scripts and Shiny apps by accessing Spark kernels programmatically. RStudio uses
-the sparklyr package to connect to Spark from R. The sparklyr package includes a dplyr interface
-to Spark data frames as well as an R interface to Spark’s distributed machine learning pipelines.
-```
-[AutoAI Overview](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai-overview.html)
-```
-The AutoAI graphical tool in Watson Studio analyzes your data and discovers data transformations,
-algorithms, and parameter settings that work best for your predictive modeling problem. AutoAI
-displays the results as model candidate pipelines ranked on a leaderboard for you to choose from.
-```
-
-<details>
-<summary> Show example answer </summary>
-<img src="../images/answer-05-study-questions.png" alt="Answer" />
-</details>
-
-
-## 6. Text extraction
+## 5. Text extraction
 
 Extract the verbs from one of the following sentences.
 
@@ -205,7 +184,7 @@ She pounced on the new toy, batting it around the room with joyous abandon.
 </details>
 
 
-## 7. Compare
+## 6. Compare
 
 Choose one pair of passages and identify what the two have in common.
 
@@ -254,7 +233,9 @@ tripped over his own hooves, earning a few giggles from the nearby chickens."
 </details>
 
 
-## 8. Text search
+## 7. Text search
+
+Get the model to output the page number that contains the text you give it.
 
 Find which page contains the text provided.
 
@@ -264,11 +245,13 @@ Page 2: "With each trip, her nest took shape, becoming cozier and more inviting.
 Page 3: "And soon enough, she had created a snug home to raise her brood of chirping chicks."
 ```
 
-Sample text:
+Example output:
 ```
-cozier
-little
-enough
+Search term: cozier
+Page: 2
+
+Search term: enough
+Page: 3
 ```
 
 <details>
@@ -276,9 +259,9 @@ enough
 <img src="../images/answer-08-text-search.png" alt="Answer" />
 </details>
 
-## 9. Classify
+## 8. Classify
 
-Classify the users' intent like a chatbot would. Examples of user intent classes are provided below.
+Prompt a model to classify the users' intent like a chatbot would. An intent is similar to a user's high-level goal during a conversation. Here are some examples of user intent classes:
 
 Class: `hi`
 ```
@@ -323,7 +306,7 @@ Hi I am trying to request a new API access key but I dont know what the ID shoul
 When I try to add a model to any project I get an Unauthorized error.
 ```
 
-**Test input**
+Below are extra input examples:
 ```
 Hi  Anyone there?
 ```
@@ -341,9 +324,9 @@ Hi team how can i import data into a project?
 
 
 
-## 10. Anomaly detection
+## 9. Anomaly detection
 
-Spot the odd entry out in the following dataset.
+Get the model to spot the odd entry out in the following dataset.
 
 ```
 1: "donkey"
@@ -360,34 +343,15 @@ Spot the odd entry out in the following dataset.
 </details>
 
 
-## 11. Math question
+## 10. Math question
 
-Figure out the answer to the question "how many minutes are there in a day?"
+Prompt the model to deduce the answer to the question "how many minutes are there in a day?"
 
 <details>
 <summary> Show example answer </summary>
 <img src="../images/answer-11-question-answer.png" alt="Answer" />
 </details>
 
-
-## 12. Write like Shakespeare
-
-Rewrite the following story in the style of Shakespeare.
-
-```
-Despite their love for each other, the young couple's relationship was doomed from
-the start. Friends and family stood in the way, fueling a tragic misunderstanding
-that ultimately led to their heartbreaking separation.
-```
-
-<details>
-<summary> Show example answer </summary>
-<img src="../images/answer-12-shakespeare.png" alt="Answer" />
-</details>
-
-
-## Note
-All the sentences and stories - about birds, puppies, kittens, donkeys, and shakespeare - were generated using ChatGPT.
 
 <img src="https://count.asgharlabs.io/count?p=/lab2_promptlab_page">
 
