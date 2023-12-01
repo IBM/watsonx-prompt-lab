@@ -19,7 +19,7 @@ Complete the following exercises using watsonx.ai's Prompt Builder.
 
 ## 1. Generate
 
-Get a model to output three creative sentences about doneys. You can use the examples below to help.
+Get a model to output three creative sentences about donkeys. You can use the examples below to help.
 
 ```
 3 sentences about puppies:
