@@ -46,10 +46,12 @@ Here's an example of a conversion between Markdown and HTML:
 
 ```
 Markdown:
-Welcome to My Blog! I'm thrilled to launch my new blog and share my thoughts with you. Expect a wide range of topics including technology, travel, and growth. Stay tuned for engaging and informative posts!
+## Welcome to My Blog!
+I'm thrilled to launch my new blog and share my thoughts with you. Expect a wide range of topics including technology, travel, and growth. Stay tuned for engaging and informative posts!
 
 HTML:
-<h2>Welcome to My Blog!</h2> <p> I'm thrilled to launch my new blog and share my thoughts with you. Expect a wide range of topics including technology, travel, and growth. Stay tuned for engaging and informative posts!</p>
+<h2>Welcome to My Blog!</h2>
+<p>I'm thrilled to launch my new blog and share my thoughts with you. Expect a wide range of topics including technology, travel, and growth. Stay tuned for engaging and informative posts!</p>
 ```
 
 Get a model to output the HTML version of any of the following Markdown snippets. 
