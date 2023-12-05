@@ -167,7 +167,7 @@ The smaller, simpler models in watsonx.ai present a more difficult challenge for
 # Further learning
 
 - [Tips for Writing Foundation Model Prompts: Prompt Engineering](https://www.ibm.com/docs/en/watsonx-as-a-service?topic=models-prompt-tips)
-- [Open Source Models in watsonx.ai](https://www.ibm.com/blog/ibm-watsonx-ai-open-source-pre-trained-foundation-models-make-ai-and-automation-easier-than-ever-before/)
+- [watsonx.ai](https://www.ibm.com/blog/ibm-watsonx-ai-open-source-pre-trained-foundation-models-make-ai-and-automation-easier-than-ever-before/)
 
 <img src="https://count.asgharlabs.io/count?p=/lab1_promptlab_page">
 
