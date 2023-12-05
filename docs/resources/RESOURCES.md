@@ -1,11 +1,17 @@
 # Additional resources
 
-## watsonx.ai
+## IBM Demos
 
-- [watsonx.ai overview](https://www.ibm.com/blog/ibm-watsonx-ai-open-source-pre-trained-foundation-models-make-ai-and-automation-easier-than-ever-before/)
-- [watsonx.ai Model Documentation](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-models.html?context=wx&audience=wdp).
+* [Collection: InfoSphere Information Server](https://www.ibm.com/demos/collection/IBM-InfoSphere-DataStage)
+* [Tutorial: Transforming your data with IBM DataStage](https://www.ibm.com/cloud/garage/dte/tutorial/transforming-your-data-ibm-datastage)
 
-## Prompt Engineering
-- [Tips for Writing Foundation Model Prompts: Prompt Engineering](https://www.ibm.com/docs/en/watsonx-as-a-service?topic=models-prompt-tips)
-- [Foundation model parameters: decoding and stopping criteria](https://www.ibm.com/docs/en/watsonx-as-a-service?topic=lab-model-parameters-prompting)
-- [Using different decoding methods](https://huggingface.co/blog/how-to-generate)
+## Redbooks
+
+* [IBM InfoSphere DataStage Data Flow and Job Design](http://www.redbooks.ibm.com/abstracts/sg247576.html)
+* [InfoSphere DataStage Parallel Framework Standard Practices](http://www.redbooks.ibm.com/abstracts/sg247830.html)
+
+## Videos
+
+* [Video: Postal codes and part numbers (DataStage)](https://www.youtube.com/watch?v=0M7Geb7Vp4U)
+* [Video: Find relationships between sales, employees, and customers (Information Analyzer)](https://www.youtube.com/watch?v=r121Opaangk)
+* [Video: Clean and analyze data (Governance Catalog)](https://www.youtube.com/watch?v=UGvaNxD0_4E)
