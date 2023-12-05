@@ -1,16 +1,11 @@
-# watsonx-prompt-lab
+# Prompt Engineering with watsonx
 
-This is the core code for the prompt-lab  workshop hosted on GitHub Pages using Material for MkDocs. To view it online, go to:
+This is the watsonx-based Prompt Engineering lab hosted on GitHub Pages using Material for MkDocs. To view it online, go to:
 
 <https://ibm.github.io/watsonx-prompt-lab>
 
-## Tips and conventions
+## License & Authors
 
-### Screenshots
+If you would like to see the detailed LICENSE click [here](./LICENSE).
 
-Screenshots look better if they are full page.
-Use [ImageMagick](https://imagemagick.org) to create a nice border around images with this command:
-
-```bash
-magick mogrify -bordercolor gray -border 2
-```
+- Author: [Rafael Vasquez](https://github.com/rafvasq)

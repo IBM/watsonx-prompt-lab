@@ -17,11 +17,6 @@ nav:
     - Lab 1. Basics of Prompt Enigineering: lab-1/README.md
     - Lab 2. Creating Prompts in watsonx.ai: lab-2/README.md
     - Lab 3. Creating Prompts with Content: lab-3/README.md
-  - References:
-    - Additional Resources: resources/RESOURCES.md
-    - Contributors: resources/CONTRIBUTORS.md
-    - MkDocs Cheatsheet: resources/MKDOCS.md
-    - Admin Guide: resources/ADMIN.md
 
 ## DO NOT CHANGE BELOW THIS LINE
 
