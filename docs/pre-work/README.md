@@ -7,7 +7,7 @@ Let's get prepare our environment to work through the Prompt Engineering lab.
 3. [Create a sandbox project](#3-create-a-sandbox-project-in-watsonxai)
 
 ## 1. Create an IBM Cloud account
-Go to https://ibm.biz/watsonx-promocode and request a featureCode, using the password provided.
+Go to [https://ibm.biz/watsonx-promocode](https://ibm.biz/watsonx-promocode) and request a featureCode, using the password provided by your instructor.
 
 ![img.png](../images/feature-code.png)
 
