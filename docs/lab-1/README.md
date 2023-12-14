@@ -1,3 +1,9 @@
+---
+title: Basics of Prompt Engineering
+description: Lab-1 of Prompt Engineering
+logo: docs/images/ibm-blue-background.png
+---
+
 # Basics of Prompt Engineering
 
 **Note:** The following images show actual results from watsonx.ai. The gray text is what we provided to the model. The blue highlighted text is how the model responded.

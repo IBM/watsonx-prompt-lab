@@ -1,3 +1,9 @@
+---
+title: Creating prompts in watsonx.ai's Builder
+description: Lab-2 of Prompt Engineering
+logo: docs/images/ibm-blue-background.png
+---
+
 # Creating prompts in watsonx.ai's Prompt Builder
 
 Complete the following exercises using watsonx.ai's Prompt Builder.
@@ -54,7 +60,7 @@ HTML:
 <p>I'm thrilled to launch my new blog and share my thoughts with you. Expect a wide range of topics including technology, travel, and growth. Stay tuned for engaging and informative posts!</p>
 ```
 
-Get a model to output the HTML version of any of the following Markdown snippets. 
+Get a model to output the HTML version of any of the following Markdown snippets.
 
 ```
 ## Background
