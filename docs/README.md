@@ -1,4 +1,9 @@
-## Prompt Engineering with watsonx.ai
+---
+title: Prompt Engineering with watsonx.ai
+description: Overview and About Prompt Engineering Lab
+logo: docs/images/ibm-blue-background.png
+---
+# Prompt Engineering with watsonx.ai
 
 Welcome! The goals of this workshop are the following:
 
@@ -6,7 +11,7 @@ Welcome! The goals of this workshop are the following:
 * Learn techniques to achieve the best results with Large Language Models
 * Apply learnings through completion of a diverse set of prompt engineering exercises
 
-### About this workshop
+## About this workshop
 
 Part art, part science, prompt engineering is the process of crafting input text to fine-tune a given large language model for best effect.
 

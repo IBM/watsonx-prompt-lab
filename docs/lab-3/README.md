@@ -1,3 +1,9 @@
+---
+title: Creating prompts with content
+description: Lab-3 of Prompt Engineering
+logo: docs/images/ibm-blue-background.png
+---
+
 # Creating prompts with content
 
 #### For this lab, the topic will be the [`project-lib` library](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/project-lib-python.html) from the Cloud Pak for Data documentation. A file containing the text for the site is provided [here]((/data/project-lib-for-python.txt)).
