@@ -2,8 +2,8 @@
 
 Let's get prepare our environment to work through the Prompt Engineering lab.
 
-1[Connect to IBM watsonx.ai](#2-connect-to-watsonxai)
-2[Create a sandbox project](#3-create-a-sandbox-project-in-watsonxai)
+1. [Connect to IBM watsonx.ai](#1-connect-to-watsonxai)
+2. [Create a sandbox project](#2-create-a-sandbox-project-in-watsonxai)
 
 
 ## 1. Connect to watsonx.ai
