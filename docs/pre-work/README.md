@@ -23,9 +23,8 @@ Otherwise, click `Create an Account or log in` and follow the instructions.
 ## 2. Create a sandbox project in watsonx.ai
 
 A *project* is where you work with data and models by using tools. When you sign up for watsonx.ai, your sandbox project is created automatically, and you can start working in it as soon as it's ready. You can also create an empty project, start from a sample project that provides sample data and other assets, or import a previously exported project.
+
 ![img.png](../images/sandbox-project.png)
-
-
 
 Once you have a project, you'll be able to open the Prompt Lab, where you can experiment with prompting different foundation models, explore sample prompts, as well as save and share your best prompts.
 
