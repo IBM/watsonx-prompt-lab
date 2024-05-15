@@ -4,28 +4,28 @@ description: Lab-2 of Prompt Engineering
 logo: docs/images/ibm-blue-background.png
 ---
 
-# Creating prompts in watsonx.ai's Prompt Builder
+# Create your own prompts in Prompt Lab
 
-Complete the following exercises using watsonx.ai's Prompt Builder.
+Complete the following exercises using watsonx.ai's Prompt Lab. You're encouraged to try and use different models! 
 
 **Exercises**
 
-| No. |                       Exercise                       |                      Summary                      |
-|-----|:----------------------------------------------------:|:-------------------------------------------------:|
-| 1   |               [Generate](#1-generate)                |        Write three sentences about donkeys        |
-| 2   |                [Rewrite](#2-rewrite)                 |            Transform Markdown to HTML             |
-| 3   |              [Summarize](#3-summarize)               |              Summarize a short story              |
-| 4   |         [Summary points](#4-summary-points)          | Create a list of topics from a meeting transcript |
-| 5   |        [Text extraction](#6-text-extraction)         |           Extract verbs from a sentence           |
-| 6   |                [Compare](#7-compare)                 |       Identify what passages have in common       |
-| 7   |            [Text search](#8-text-search)             |  Find which page contains the sought-after text   |
-| 8   |               [Classify](#9-classify)                |           Detect chatbot users' intent            |
-| 9  |      [Anomaly detection](#10-anomaly-detection)      |              Spot the odd entry out               |
-| 10  |          [Math question](#11-math-question)          |       How many minutes are there in a day?        |
+| No. |                       Exercise                       |                          Summary                          |
+|-----|:----------------------------------------------------:|:---------------------------------------------------------:|
+| 1   |               [Generate](#1-generate)                |                 Write creative sentences                  |
+| 2   |                [Rewrite](#2-rewrite)                 |                Transform Markdown to HTML                 |
+| 3   |              [Summarize](#3-summarize)               |                  Summarize a short story                  |
+| 4   |         [Summary points](#4-summary-points)          |         List the topics from a meeting transcript         |
+| 5   |        [Text extraction](#6-text-extraction)         |               Extract verbs from a sentence               |
+| 6   |                [Compare](#7-compare)                 |           Identify what passages have in common           |
+| 7   |            [Text search](#8-text-search)             |             Find which page contains the text             |
+| 8   |               [Classify](#9-classify)                |                  Detect a users' intent                   |
+| 9  |      [Anomaly detection](#10-anomaly-detection)      |                  Spot the odd entry out                   |
+| 10  |          [Math question](#11-math-question)          | Solve a math question |
 
 ## 1. Generate
 
-Get a model to output three creative sentences about donkeys. You can use the examples below to help.
+Get a model to output three creative sentences about camels formatted like a list. You can use the examples below to help.
 
 ```
 3 sentences about puppies:
@@ -43,8 +43,10 @@ Get a model to output three creative sentences about donkeys. You can use the ex
 
 <details>
 <summary> Show example answer </summary>
-<img src="../images/answer-01-generate.png" alt="Answer" />
+<img src="../images/lab2/2.1-generate.png" alt="Answer" />
 </details>
+
+If you get it done with one model, what happens when you use the same prompt with another? Do you have to improve your prompt to get that model to do it too?
 
 ## 2. Rewrite
 
@@ -60,7 +62,7 @@ HTML:
 <p>I'm thrilled to launch my new blog and share my thoughts with you. Expect a wide range of topics including technology, travel, and growth. Stay tuned for engaging and informative posts!</p>
 ```
 
-Get a model to output the HTML version of any of the following Markdown snippets.
+Get a model to output the HTML version of the following Markdown snippets.
 
 ```
 ## Background
@@ -81,15 +83,13 @@ Using LLMs is pretty easy: prompt the model with text (eg. "I took my dog") and 
 generates text as output (eg. "for a walk").
 ```
 ```
-## Hall of shame: when LLMs go wrong
-Even the creators of LLMs cannot always fully anticipate or explain these models' output:
-[ChatGPT's creators can’t figure out why it won’t talk about Trump](https://www.semafor.com/
-article/02/03/2023/how-chatgpt-inadvertently-learned-to-avoid-talking-about-trump)
+## What Are Large Language Models (LLMs)?
+[Large language models](https://www.ibm.com/topics/large-language-models) are AI systems capable of understanding and generating human language by processing vast amounts of text data.
 ```
 
 <details>
 <summary> Show example answer </summary>
-<img src="../images/answer-02-rewrite.png" alt="Answer" />
+<img src="../images/lab2/2.2-rewrite.png" alt="Answer" />
 </details>
 
 <p>&nbsp;</p>
@@ -97,35 +97,58 @@ article/02/03/2023/how-chatgpt-inadvertently-learned-to-avoid-talking-about-trum
 
 ## 3. Summarize
 
-Get a model to output a short summary of any of the following short stories.
+Get a model to output a short one-sentence summary of the following short stories (one at a time).
 
 ```
-A little bird chirped as she gathered twigs and bits of moss in her beak, flitting back and
-forth between the trees. With each trip, her nest took shape, becoming cozier and more inviting.
-And soon enough, she had created a snug home to raise her brood of chirping chicks.
+Perched on a delicate branch, a tiny sparrow named Luna gazed out at the sunrise, her feathers a fiery hue in the 
+morning light. She trilled a sweet melody, and the forest came alive with the gentle rustle of leaves and chirping 
+of her friends. With a flutter of her wings, Luna took to the sky, her heart full of joy and her spirit free.
 ```
 ```
-As soon as the package was opened, the little cat's eyes lit up with excitement. She pounced
-on the new toy, batting it around the room with joyous abandon. With a contented purr, she
-snuggled up with her toy, feeling grateful for the love and attention of her caring owner.
+Whiskers, a sleek black cat, prowled through the moonlit garden, her ears perked up and her tail twitching with 
+excitement. She stalked her prey, a unsuspecting mouse, with stealthy precision, her eyes gleaming with a fierce 
+inner light. With a swift pounce, Whiskers caught her prize, and a triumphant meow echoed through the night air.
 ```
 ```
-The ship heaved and tossed on the angry sea as the storm raged on. Waves as tall as mountains
-crashed against the hull, threatening to capsize the vessel. But the captain and crew held
-steady, navigating the treacherous waters with skill and determination, until finally, the
-storm subsided and the ship emerged triumphant, battered but unbroken.
+The ship cut through the choppy waves, its sails billowing in the gusty wind as Captain James stood at the helm, 
+his eyes fixed on the horizon. The crew scrambled to secure the deck as a fierce storm brewed, the ship's timbers 
+creaking and groaning beneath their feet. As the storm raged on, the ship rode the turbulent seas, its fate hanging 
+in the balance.
 ```
 ```
-As soon as the two dogs met at the park, their tails began to wag and they bounded around
-each other with glee. Their owners struck up a conversation, and soon found that they had
-much in common, bonding over their shared love of dogs and the outdoors. By the end of the
-day, new friendships had been formed, and both the dogs and their owners left the park with
-happy hearts and wagging tails.
+Max, a golden retriever, met Rocky, a black labrador, at the park. They sniffed each other and quickly became friends. 
+Together, they played and had fun in the afternoon. They chased each other around, lapping the playground several times. 
+As the sun began to set, Max and Rocky said their goodbyes, already looking forward to their next adventure together.
 ```
+
+Here are some examples to inspire you:
+```
+Story:
+As the clock struck midnight, a lone figure crept into the abandoned mansion, their flashlight casting eerie shadows 
+on the walls. Suddenly, a chill ran down their spine as they stumbled upon a dusty, old portrait of a family, 
+their eyes seeming to follow them around the room. The figure couldn't shake the feeling that they were being watched, 
+and it wasn't until they heard the faint whisper of "welcome home" that they realized they weren't alone.
+
+Summary:
+A lone figure uncovers a mysterious presence in an abandoned mansion.
+```
+
+```
+Story:
+As the door swung open, a chilly gust of air swept into the coffee shop, carrying with it the scent of rain and the 
+promise of a new customer. Amal, a regular, strode in, shaking the droplets from her umbrella and smiling wearily 
+at Emma behind the counter. "The usual, please," she said, slipping onto a stool and letting out a contented sigh as 
+the warm atmosphere enveloped her. Emma nodded, already reaching for the French roast beans, and began to brew a fresh 
+cup.
+
+Summary:
+Amal enters a coffee shop on a rainy day and orders her usual coffee.
+```
+
 
 <details>
 <summary> Show example answer </summary>
-<img src="../images/answer-03-summarize.png" alt="Answer" />
+<img src="../images/lab2/2.3-summarize.png" alt="Answer" />
 </details>
 
 ## 4. Summary points
@@ -163,7 +186,7 @@ Prompt a model to create a list of topics from any of the following meeting tran
 
 <details>
 <summary> Show example answer </summary>
-<img src="../images/answer-04-summary-points.png" alt="Answer" />
+<img src="../images/lab2/2.4-topics.png" alt="Answer" />
 </details>
 
 
@@ -188,7 +211,7 @@ She pounced on the new toy, batting it around the room with joyous abandon.
 
 <details>
 <summary> Show example answer </summary>
-<img src="../images/answer-06-text-extraction.png" alt="Answer" />
+<img src="../images/lab2/2.5-extraction.png" alt="Answer" />
 </details>
 
 
@@ -237,7 +260,7 @@ tripped over his own hooves, earning a few giggles from the nearby chickens."
 
 <details>
 <summary> Show example answer </summary>
-<img src="../images/answer-07-compare.png" alt="Answer" />
+<img src="../images/lab2/2.6-compare.png" alt="Answer" />
 </details>
 
 
@@ -264,7 +287,7 @@ Page: 3
 
 <details>
 <summary> Show example answer </summary>
-<img src="../images/answer-08-text-search.png" alt="Answer" />
+<img src="../images/lab2/2.7-search.png" alt="Answer" />
 </details>
 
 ## 8. Classify
@@ -327,7 +350,7 @@ Hi team how can i import data into a project?
 
 <details>
 <summary> Show example answer </summary>
-<img src="../images/answer-09-classify.png" alt="Answer" />
+<img src="../images/lab2/2.8-classify.png" alt="Answer" />
 </details>
 
 
@@ -347,7 +370,7 @@ Get the model to spot the odd entry out in the following dataset.
 
 <details>
 <summary> Show example answer </summary>
-<img src="../images/answer-10-anomaly-detection.png" alt="Answer" />
+<img src="../images/lab2/2.9-detect.png" alt="Answer" />
 </details>
 
 
@@ -357,7 +380,7 @@ Prompt the model to deduce the answer to the question "how many minutes are ther
 
 <details>
 <summary> Show example answer </summary>
-<img src="../images/answer-11-question-answer.png" alt="Answer" />
+<img src="../images/lab2/2.10-answer.png" alt="Answer" />
 </details>
 
 
