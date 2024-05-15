@@ -11,11 +11,11 @@ logo: docs/images/ibm-blue-background.png
 ### 1.0 LLM Foundations
 Before we jump into exploring the capabilities of Prompt Lab, we first need to lay a foundation for how Large Language Models (LLMs) work, and how we can tune the model and parameters to change their output. Gaining this understanding will make us more effective at prompt engineering.
 
-![img.png](../images/lab1-1.png)
+![img.png](../images/lab1/1.1-free-form.png)
 
 When you open up Prompt Lab and click the `Freeform` mode-option, this is what you will be shown. The large central text area is the prompt editor. On the right-side, you can display the model parameters that you can use to select to optimize how the model responds to your prompt. On the bottom-left a summary of the number of tokens used by your prompt during execution will display when we generate a response:
 
-![img.png](../images/lab1-2.png)
+![img.png](../images/lab1/1.2-tokens.png)
 
 ### 1.1 Tokens
 
@@ -28,14 +28,14 @@ It is important to monitor your token usage to know how much information you are
 This is not a chatbot interface (check out the `Chat` view for that) and with many models, just specifying an instruction or question rarely produces a good result. For instance, what if we prompt the `flan-ul2-20b` model to
 list ideas to start some kind of coffee business?
 
-![img.png](../images/lab1-3.png)
+![img.png](../images/lab1/1.3-simple.png)
 
 Given our prompt, we were hoping for a little more information; but now we know that simple prompts don't work with all LLMs.
 
 ### 1.3 Cue the output structure
 To improve the response, we can start by addressing its structure. Our prompt might imply that we want the ideas in the structure of a list. Let's include a cue to start the response in the desired structure to nudge the model to provide us with a structured response. For example, let's add the two characters `1.` to the end of our original prompt:
 
-![img.png](../images/lab1-4.png)
+![img.png](../images/lab1/1.4-numbered.png)
 
 It might not be perfect, but note how dramatically the response changed and improved just by offering a couple of extra characters to the model.
 
@@ -54,7 +54,7 @@ Give ideas to start a lemonade business:
 Give ideas to start a coffee business:
 ```
 
-![img.png](../images/lab1-5.png)
+![img.png](../images/lab1/1.5-one-shot.png)
 
 
 ### 1.5 Include descriptive details
@@ -70,7 +70,7 @@ Give ideas to start a lemonade business:
 Give me 3 ideas to start my own successful, coffee shop business:
 ```
 
-![img.png](../images/lab1-6.png)
+![img.png](../images/lab1/1.6-descriptive.png)
 
 Remember the first, incoherent response we received from this same model? With a few changes to our prompt, the response has improved to become much more coherent and helpful. Below, we'll learn more about all the other tweaks we can make to simple prompts like this to continue to improve the output. 
 
@@ -101,7 +101,7 @@ If you're finding the generated text is too short or too long, try adjusting the
 - The `Min tokens` parameter controls the minimum number of tokens in the generated response.
 - The `Max tokens` parameter controls the maximum number of tokens in the generated response.
 
-![img.png](../images/lab1-7.png)
+![img.png](../images/lab1/1.7-max-tokens.png)
 
 ### 2.2 Specify stop sequences
 
@@ -109,15 +109,15 @@ If you specify stop sequences, the output will automatically stop when one of th
 
 The example below shows an output that continues for longer than we probably want it to.
 
-![img.png](../images/lab1-8.png)
+![img.png](../images/lab1/1.8-too-long.png)
 
 To combat this behaviour, we can specify a stop sequence of two carriage returns:
 
-![img.png](../images/lab1-9.png)
+![img.png](../images/lab1/1.9-stop-criteria.png)
 
 Now, we have a more satisfying response. The output stops after two carriage returns:
 
-![img.png](../images/lab1-10.png)
+![img.png](../images/lab1/1.10-stopped.png)
 
 
 ### 2.3 Adjust decoding parameters
@@ -136,17 +136,17 @@ An advantage of greedy decoding is that you will see reproducible results which 
 
 Experiment with different parameter values, below is an example of what happens if we switch to the `Sampling` decoding approach:
 
-![img.png](../images/lab1-11.png)
+![img.png](../images/lab1/1.11-sampling.png)
 
 ### 2.4 Add a repetition penalty
 
 Sometimes, you will see text being repeated over and over:
 
-![img.png](../images/lab1-12.png)
+![img.png](../images/lab1/1.12-repetitive.png)
 
 You could try to increase the temperature to resolve the problem, however, when text is still repetitive, you can also try to add a _repetition penalty_. The higher the penalty, the less likely the results will include repetitive text:
 
-![img.png](../images/lab1-13.png)
+![img.png](../images/lab1/1.13-repetition-penalty.png)
 
 When it comes to repetition, remember that sometimes our output requires some. For example, if you wanted a list using bullet points. In that case, penalizing repetition might work against you.
 
