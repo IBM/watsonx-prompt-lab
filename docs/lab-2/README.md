@@ -4,28 +4,36 @@ description: Lab-2 of Prompt Engineering
 logo: docs/images/ibm-blue-background.png
 ---
 
-# Create your own prompts in Prompt Lab
+# Apply What You Learned
 
-Complete the following exercises using watsonx.ai's Prompt Lab. You're encouraged to try and use different models! 
+Complete the following exercises using watsonx.ai's Prompt Lab. 
+
+- **Be curious!** Try different, smaller models: do you have to improve your prompt or change parameters to get a satisfactory output?
+- **Be creative!** Numbered or bulleted list? Feel free to interpret the exercise yourself and make the output look the way you want to.
+- **Be specific!** Aim for perfection. Use descriptive language, examples, and parameters to perfect your output.
 
 **Exercises**
 
-| No. |                       Exercise                       |                          Summary                          |
-|-----|:----------------------------------------------------:|:---------------------------------------------------------:|
-| 1   |               [Generate](#1-generate)                |                 Write creative sentences                  |
-| 2   |                [Rewrite](#2-rewrite)                 |                Transform Markdown to HTML                 |
-| 3   |              [Summarize](#3-summarize)               |                  Summarize a short story                  |
-| 4   |         [Summary points](#4-summary-points)          |         List the topics from a meeting transcript         |
-| 5   |        [Text extraction](#6-text-extraction)         |               Extract verbs from a sentence               |
-| 6   |                [Compare](#7-compare)                 |           Identify what passages have in common           |
-| 7   |            [Text search](#8-text-search)             |             Find which page contains the text             |
-| 8   |               [Classify](#9-classify)                |                  Detect a users' intent                   |
-| 9  |      [Anomaly detection](#10-anomaly-detection)      |                  Spot the odd entry out                   |
-| 10  |          [Math question](#11-math-question)          | Solve a math question |
+| No. |                  Exercise                  |                  Summary                  |
+|-----|:------------------------------------------:|:-----------------------------------------:|
+| 1   |          [Generate](#1-generate)           |         Write creative sentences          |
+| 2   |           [Rewrite](#2-rewrite)            |        Transform Markdown to HTML         |
+| 3   |         [Summarize](#3-summarize)          |          Summarize a short story          |
+| 4   |    [Summary Topics](#4-summary-points)     | List the topics from a meeting transcript |
+| 5   |   [Text Extraction](#6-text-extraction)    |       Extract verbs from a sentence       |
+| 6   |           [Compare](#7-compare)            |   Identify what passages have in common   |
+| 7   |       [Text Search](#8-text-search)        |     Find which page contains the text     |
+| 8   |          [Classify](#9-classify)           |          Detect a users' intent           |
+| 9   | [Anomaly Detection](#10-anomaly-detection) |          Spot the odd entry out           |
+| 10  |     [Math Question](#11-math-question)     |           Solve a math question           |
 
 ## 1. Generate
 
-Get a model to output three creative sentences about camels formatted like a list. You can use the examples below to help.
+### Get a model to output three creative sentences about camels. 
+
+Can you format the sentences like a list? What happens when you use `Sampling` decoding and turn `temperature` up?
+
+You can use the examples below to help.
 
 ```
 3 sentences about puppies:
@@ -46,23 +54,9 @@ Get a model to output three creative sentences about camels formatted like a lis
 <img src="../images/lab2/2.1-generate.png" alt="Answer" />
 </details>
 
-If you get it done with one model, what happens when you use the same prompt with another? Do you have to improve your prompt to get that model to do it too?
-
 ## 2. Rewrite
 
-Here's an example of a conversion between Markdown and HTML:
-
-```
-Markdown:
-## Welcome to My Blog!
-I'm thrilled to launch my new blog and share my thoughts with you. Expect a wide range of topics including technology, travel, and growth. Stay tuned for engaging and informative posts!
-
-HTML:
-<h2>Welcome to My Blog!</h2>
-<p>I'm thrilled to launch my new blog and share my thoughts with you. Expect a wide range of topics including technology, travel, and growth. Stay tuned for engaging and informative posts!</p>
-```
-
-Get a model to output the HTML version of the following Markdown snippets.
+### Get a model to output the HTML version of the following Markdown snippets.
 
 ```
 ## Background
@@ -87,17 +81,27 @@ generates text as output (eg. "for a walk").
 [Large language models](https://www.ibm.com/topics/large-language-models) are AI systems capable of understanding and generating human language by processing vast amounts of text data.
 ```
 
+Here's an example of a conversion between Markdown and HTML:
+
+```
+Markdown:
+## Welcome to My Blog!
+I'm thrilled to launch my new blog and share my thoughts with you. Expect a wide range of topics including technology, travel, and growth. Stay tuned for engaging and informative posts!
+
+HTML:
+<h2>Welcome to My Blog!</h2>
+<p>I'm thrilled to launch my new blog and share my thoughts with you. Expect a wide range of topics including technology, travel, and growth. Stay tuned for engaging and informative posts!</p>
+```
+
+
 <details>
 <summary> Show example answer </summary>
 <img src="../images/lab2/2.2-rewrite.png" alt="Answer" />
 </details>
 
-<p>&nbsp;</p>
-
-
 ## 3. Summarize
 
-Get a model to output a short one-sentence summary of the following short stories (one at a time).
+### Get a model to output a short one-sentence summary of the following short stories (one at a time).
 
 ```
 Perched on a delicate branch, a tiny sparrow named Luna gazed out at the sunrise, her feathers a fiery hue in the 
@@ -145,43 +149,53 @@ Summary:
 Amal enters a coffee shop on a rainy day and orders her usual coffee.
 ```
 
-
 <details>
 <summary> Show example answer </summary>
 <img src="../images/lab2/2.3-summarize.png" alt="Answer" />
 </details>
 
-## 4. Summary points
+## 4. Summary Topics
 
-Prompt a model to create a list of topics from any of the following meeting transcripts.
+### Prompt a model to create a bulleted list of topics from any of the following meeting transcripts. 
 
 ```
-00:00   [sam]   I wanted to share an update on project X today.
-00:15   [sam]   Project X will be completed at the end of the week.
-00:30   [erin]  That's great!
-00:35   [erin]  I heard from customer Y today, and they agreed to buy our product.
-00:45   [alex]  Customer Z said they will too.
-01:05   [sam]   Great news, all around.
+00:00 [joe] The goal today is to finalize the budget proposal.
+00:15 [sarah] I think we should allocate 30% to marketing.
+00:30 [joe] That's a good starting point.
+00:50 [dave] I agree, but we should also consider allocating 20% to research and development.
+01:15 [sarah] That's a good point. What about the remaining 50%?
+01:40 [dave] We could use it for operational costs.
+02:05 [joe] I think that's a solid plan. Are we all in agreement?
+02:30 [sarah] Yes, I am.
+02:50 [dave] Me too.
+03:15 [joe] Done!
 ```
 ```
-00:00   [ali]   The goal today is to agree on a design solution.
-00:12   [alex]  I think we should consider choice 1.
-00:25   [ali]   I agree
-00:40   [erin]  Choice 2 has the advantage that it will take less time.
-01:03   [alex]  Actually, that's a good point.
-01:30   [ali]   So, what should we do?
-01:55   [alex]  I'm good with choice 2.
-02:20   [erin]  Me too.
-02:45   [ali]   Done!
+00:00 [jess] Let's plan the company picnic!
+00:10 [ali] How about we have it at the beach?
+00:21 [sarah] Good idea.
+00:35 [ali] Can we have a BBQ and games too?
+00:50 [jess] Maybe we could also have a potluck?
+01:05 [sarah] That way everyone can bring something to share.
+01:20 [ali] We could also set up a few outdoor activities like volleyball and badminton.
+01:40 [jess] I like this plan. Let's make it happen!
 ```
+
+Here's an example:
 ```
-00:00   [alex]  Let's plan the team party!
-00:10   [ali]   How about we go out for lunch at the restaurant?
-00:21   [sam]   Good idea.
-00:47   [sam]   Can we go to a movie too?
-01:04   [alex]  Maybe golf?
-01:15   [sam]   We could give people an option to do one or the other.
-01:29   [alex]  I like this plan.  Let's have a party!
+Transcript:
+00:00 [jane] What's the status on Project A?
+00:15 [bob] We're still waiting on the Johnson report for Project B.
+00:30 [jane] Can we get an update on the timeline for Project C?
+00:45 [bob] I'll send out an email with the latest information.
+01:02 [jane] Also, let's schedule a meeting with the marketing team to discuss the campaign for Project D.
+01:18 [bob] I'll set it up for next Thursday.
+01:35 [jane] Sounds good. Let's move forward with the plan.
+
+Summary:
+- Project A is waiting on Project B
+- Project C update will be emailed
+- Project D will be discussed next Thursday
 ```
 
 <details>
@@ -190,23 +204,39 @@ Prompt a model to create a list of topics from any of the following meeting tran
 </details>
 
 
-## 5. Text extraction
+## 5. Text Extraction
 
-Extract the verbs from one of the following sentences.
+### Extract only the verbs from any of the following sentences.
+
+Can you make the model extract only the present tense conjugation verb? (e.g. `pounce` instead of `pounced`) 
 
 ```
-As soon as the two dogs met at the park, their tails began to wag and they bounded
-around each other with glee.
+I will run, jump, and dance to the music festival tonight.
 ```
 ```
-Their owners struck up a conversation, and soon found that they had much in common,
-bonding over their shared love of dogs and the outdoors.
+Their colleagues gathered around the water cooler, and soon discovered that they had much in common, connecting over their shared passion for music and travel.
 ```
 ```
 As soon as the package was opened, the little cat's eyes lit up with excitement.
 ```
 ```
 She pounced on the new toy, batting it around the room with joyous abandon.
+```
+
+Here are a couple of examples:
+
+```
+Sentence:
+As soon as the two dogs met at the park, their tails began to wag and they bounded around each other with glee.
+Verbs:
+met, begin, wag, bound
+
+Sentence:
+Their owners struck up a conversation, and soon found that they had much in common,
+bonding over their shared love of dogs and the outdoors.
+Verbs:
+strike, found, bond
+
 ```
 
 <details>
@@ -217,45 +247,51 @@ She pounced on the new toy, batting it around the room with joyous abandon.
 
 ## 6. Compare
 
-Choose one pair of passages and identify what the two have in common.
+### Identify what any of the pairs of passages below have in common.
+
+You can start by listing common elements (e.g. a bird, the wind), but what about common themes? (e.g. the beauty of the sun) 
 
 ```
-"The little bird spent days gathering twigs, leaves, and feathers, carefully
-crafting her new home. When she finally settled into her cozy nest, she felt a
-sense of pride and contentment, knowing she had created a safe haven for
-herself and her future chicks."
+The bird sat on the windowsill, its bright feathers a splash of color
+against the drab gray wall. It cocked its head to one side, as if listening
+to the distant chirping of its fellow birds. The morning sunlight
+streamed through the window, casting a warm glow over the bird's
+plumage.
 
-"The little bird tried to carry a twig that was too big for her, and she
-ended up tumbling backward, legs sticking up in the air. Her feathered friends
-tweeted with laughter, and the little bird joined in, knowing that sometimes
-even the best-laid plans can go awry."
+The bird took to the skies, its wings beating rapidly as it soared above
+the treetops. The wind ruffled its feathers, but it flew with ease, its eyes
+scanning the landscape below for signs of food or danger. The sun was
+high overhead, casting a warm glow over the bird's feathers as it flew
+over the fields and forests.
 ```
 ```
-"The little kitten lapped up the milk with her tiny pink tongue, making a cute
-slurping sound. Her fuzzy face was covered in a white mustache, and she let
-out a tiny purr of contentment as she finished her meal."
+It's windy as the sun sets over the horizon, casting a warm glow on the 
+landscape.
 
-"The little kitten nibbled on the treat, savoring every morsel of the delicious
-flavor. Her big round eyes widened with delight, and she purred contentedly,
-grateful for the simple pleasure of a yummy snack."
+A gentle breeze rustles the leaves of the trees as the sun begins to set 
+and colour the landscape.
 ```
 ```
-"The puppy spun in circles, trying to catch his tail, but ended up tumbling
-over and over. His antics had his owners laughing out loud, and even the other
-dogs at the park stopped to watch the silly sight."
+"The dog wagged its tail excitedly as it waited for its owner to come
+home. It had been a long day, and the dog was eager to play and receive
+some attention. As soon as it heard the door open, the dog ran to greet
+its owner, tail wagging furiously."
 
-"The dog chased after the ball, wagging his tail with excitement. His owner
-threw the ball again and again, and the dog happily retrieved it each time,
-barking with joy."
+"The dog lay on its bed, panting softly as it watched its owner pack
+up the car. It had been a long day, and the dog was tired but content.
+As soon as its owner gave it a pat and a treat, the dog settled in for a
+well-deserved nap."
 ```
 ```
-"The naughty donkey nudged the gate open with his nose and ran out into the
-meadow, braying with delight. His owner shook his head in amusement, knowing
-that the playful donkey always found a way to bring a smile to his face."
+"The old woman sat on the beach, watching the sun set over the ocean. He
+thought about his life, and the memories he had made with his loved ones.
+As the stars began to twinkle in the sky, he felt a sense of peace wash over
+him, knowing that he had lived a full and happy life."
 
-"The mischievous donkey chased after the butterfly, but ended up
-braying in alarm as it flew too close to his face. He stumbled backward and
-tripped over his own hooves, earning a few giggles from the nearby chickens."
+"The old woman sat on the mountain, watching the sun rise over the
+valley. She thought about her life, and the lessons she had learned from her
+experiences. As the mist cleared from the valley, she felt a sense of
+contentment, knowing that she had lived a life of purpose and meaning."
 ```
 
 <details>
@@ -264,16 +300,19 @@ tripped over his own hooves, earning a few giggles from the nearby chickens."
 </details>
 
 
-## 7. Text search
+## 7. Text Search
 
-Get the model to output the page number that contains the text you give it.
+### Get the model to output the page number that contains the text you give it.
 
-Find which page contains the text provided.
+Start simple and format the output however you like. For a challenge, can you get the model to find words that appear on multiple pages?
 
 ```
 Page 1: "A little bird chirped as she gathered twigs and bits of moss in her beak, flitting back and forth between the trees."
 Page 2: "With each trip, her nest took shape, becoming cozier and more inviting."
 Page 3: "And soon enough, she had created a snug home to raise her brood of chirping chicks."
+Page 4: "As the sun began to rise, casting a warm glow over the forest, the little bird sang a sweet lullaby to her chicks."
+Page 5: "The chicks fluttered around their mother, their tiny voices joining in harmony with her own."
+Page 6: "Together, they spent the day exploring the forest, playing and growing stronger by the minute."
 ```
 
 Example output:
@@ -285,6 +324,20 @@ Search term: enough
 Page: 3
 ```
 
+Here's an example input you can build upon: 
+```
+Story:
+Page 1: "The wolf walked with purpose, his powerful legs taking him through the snowy terrain."
+Page 2: "He scanned the landscape, his keen eyes searching for any sign of prey or danger."
+Page 3: "The moon's glow illuminated his path, casting long, dancing shadows on the frozen ground."
+
+Term: wolf
+Page: 1
+
+Term: keen
+Page: 2
+```
+
 <details>
 <summary> Show example answer </summary>
 <img src="../images/lab2/2.7-search.png" alt="Answer" />
@@ -292,7 +345,11 @@ Page: 3
 
 ## 8. Classify
 
-Prompt a model to classify the users' intent like a chatbot would. An intent is similar to a user's high-level goal during a conversation. Here are some examples of user intent classes:
+### Prompt a model to classify the users' intent like a chatbot would. 
+
+An intent is similar to a user's high-level goal during a conversation. Can the model classify the intent of a user's message? 
+
+Here are some examples of intent classes:
 
 Class: `hi`
 ```
@@ -353,11 +410,11 @@ Hi team how can i import data into a project?
 <img src="../images/lab2/2.8-classify.png" alt="Answer" />
 </details>
 
-
-
 ## 9. Anomaly detection
 
-Get the model to spot the odd entry out in the following dataset.
+### Get the model to spot the odd entry out in any the following datasets. 
+
+Start by just identifying the outlier, then try to get the model to tell you both the name **and** its entry number. 
 
 ```
 1: "donkey"
@@ -367,12 +424,27 @@ Get the model to spot the odd entry out in the following dataset.
 5: "donkey"
 6: "donkey"
 ```
+```
+1: "cat"
+2: "cat"
+3: "cat"
+4: "cat"
+5: "dog"
+6: "cat"
+```
+```
+1: "mouse"
+2: "mouse"
+3: "mouse"
+4: "rat"
+5: "mouse"
+6: "mouse"
+```
 
 <details>
 <summary> Show example answer </summary>
 <img src="../images/lab2/2.9-detect.png" alt="Answer" />
 </details>
-
 
 ## 10. Math question
 
