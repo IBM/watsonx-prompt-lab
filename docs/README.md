@@ -27,6 +27,14 @@ In this workshop, you will learn the basics of prompt engineering, from monitori
 | [Lab 0: Pre-work](pre-work/README.md)                      | Registration and Setup    |
 | [Lab 1: The Basics of Prompt Engineering](lab-1/README.md) | Introduction and Examples |
 | [Lab 2: Apply What You Learned](lab-2/README.md)           | Basic Exercises           |
-| [Lab 3: Think Outside of the Box](lab-3/README.md)         | Advanced Exercises        |
+
+[//]: # (| [Lab 3: Think Outside of the Box]&#40;lab-3/README.md&#41;         | Advanced Exercises        |)
+
+## Further Study
+
+[Generative AI: Prompt Engineering Basics by IBM](https://www.coursera.org/learn/generative-ai-prompt-engineering-for-everyone) through Coursera
+
+[Prompt Engineering for Everyone by IBM](https://cognitiveclass.ai/courses/prompt-engineering-for-everyone) through CognitiveClass.ai
+
 
 <img src="https://count.asgharlabs.io/count?p=/main_promptlab_page">

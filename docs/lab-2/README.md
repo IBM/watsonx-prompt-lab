@@ -1,5 +1,5 @@
 ---
-title: Creating prompts in watsonx.ai's Builder
+title: Apply What You Learned
 description: Lab-2 of Prompt Engineering
 logo: docs/images/ibm-blue-background.png
 ---

@@ -14,9 +14,9 @@ nav:
     - About the workshop: README.md
   - Workshop:
     - Lab 0. Pre-work: pre-work/README.md
-    - Lab 1. Basics of Prompt Enigineering: lab-1/README.md
-    - Lab 2. Creating Prompts in watsonx.ai: lab-2/README.md
-    - Lab 3. Creating Prompts with Content: lab-3/README.md
+    - Lab 1. The Basics of Prompt Engineering: lab-1/README.md
+    - Lab 2. Apply What You Learned: lab-2/README.md
+#    - Lab 3. Think Outside of the Box: lab-3/README.md
 
 ## DO NOT CHANGE BELOW THIS LINE
 

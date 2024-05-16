@@ -1,5 +1,5 @@
 ---
-title: Creating prompts with content
+title: Think Outside of the Box
 description: Lab-3 of Prompt Engineering
 logo: docs/images/ibm-blue-background.png
 ---
@@ -18,8 +18,7 @@ logo: docs/images/ibm-blue-background.png
 
 ## 1. Topic Summary
 
-Summarize the [`project-lib` library](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/project-lib-python.html) from the Cloud Pak for Data documentation. A file containing the text for the site is provided [here](/data/project-lib-for-python.txt).
-
+Summarize the [`project-lib` library](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/project-lib-python.html) from the Cloud Pak for Data documentation. A file containing the text for the site is provided [here](/data/project-lib-for-python.txt)
 <details>
 <summary> Show example answer </summary>
 <img src="../images/week-3-answer-01-summarize.png" alt="Answer" />
@@ -52,7 +51,6 @@ Answer questions about the [`project-lib` library](https://dataplatform.cloud.ib
 <summary> Show example answer </summary>
 <img src="../images/week-3-answer-04-answer-questions.png" alt="Answer" />
 </details>
-
 
 
 <img src="https://count.asgharlabs.io/count?p=/lab3_promptlab_page">
