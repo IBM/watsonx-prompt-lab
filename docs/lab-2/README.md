@@ -29,7 +29,7 @@ Complete the following exercises using watsonx.ai's Prompt Lab.
 
 ## 1. Generate
 
-### Get a model to output three creative sentences about camels. 
+**Get a model to output three creative sentences about camels.** 
 
 Can you format the sentences like a list? What happens when you use `Sampling` decoding and turn `temperature` up?
 
@@ -56,7 +56,7 @@ You can use the examples below to help.
 
 ## 2. Rewrite
 
-### Get a model to output the HTML version of the following Markdown snippets.
+**Get a model to output the HTML version of the following Markdown snippets.**
 
 ```
 ## Background
@@ -101,7 +101,7 @@ HTML:
 
 ## 3. Summarize
 
-### Get a model to output a short one-sentence summary of the following short stories (one at a time).
+**Get a model to output a short one-sentence summary of the following short stories (one at a time).**
 
 ```
 Perched on a delicate branch, a tiny sparrow named Luna gazed out at the sunrise, her feathers a fiery hue in the 
@@ -156,7 +156,7 @@ Amal enters a coffee shop on a rainy day and orders her usual coffee.
 
 ## 4. Summary Topics
 
-### Prompt a model to create a bulleted list of topics from any of the following meeting transcripts. 
+**Prompt a model to create a bulleted list of topics from any of the following meeting transcripts.** 
 
 ```
 00:00 [joe] The goal today is to finalize the budget proposal.
@@ -206,7 +206,7 @@ Summary:
 
 ## 5. Text Extraction
 
-### Extract only the verbs from any of the following sentences.
+**Extract only the verbs from any of the following sentences.**
 
 Can you make the model extract only the present tense conjugation verb? (e.g. `pounce` instead of `pounced`) 
 
@@ -247,7 +247,7 @@ strike, found, bond
 
 ## 6. Compare
 
-### Identify what any of the pairs of passages below have in common.
+**Identify what any of the pairs of passages below have in common.**
 
 You can start by listing common elements (e.g. a bird, the wind), but what about common themes? (e.g. the beauty of the sun) 
 
@@ -302,7 +302,7 @@ contentment, knowing that she had lived a life of purpose and meaning."
 
 ## 7. Text Search
 
-### Get the model to output the page number that contains the text you give it.
+**Get the model to output the page number that contains the text you give it.**
 
 Start simple and format the output however you like. For a challenge, can you get the model to find words that appear on multiple pages?
 
@@ -345,7 +345,7 @@ Page: 2
 
 ## 8. Classify
 
-### Prompt a model to classify the users' intent like a chatbot would. 
+**Prompt a model to classify the users' intent like a chatbot would.** 
 
 An intent is similar to a user's high-level goal during a conversation. Can the model classify the intent of a user's message? 
 
@@ -412,9 +412,9 @@ Hi team how can i import data into a project?
 
 ## 9. Anomaly detection
 
-### Get the model to spot the odd entry out in any the following datasets. 
+**Get the model to spot the odd entry out in any the following datasets.** 
 
-Start by just identifying the outlier, then try to get the model to tell you both the name **and** its entry number. 
+Start by just identifying the outlier, then try to get the model to tell you both the name and its entry number. 
 
 ```
 1: "donkey"
@@ -448,7 +448,7 @@ Start by just identifying the outlier, then try to get the model to tell you bot
 
 ## 10. Math question
 
-Prompt the model to deduce the answer to the question "how many minutes are there in a day?"
+**Prompt the model to deduce the answer to the question: _how many minutes are there in a day?_**
 
 <details>
 <summary> Show example answer </summary>
