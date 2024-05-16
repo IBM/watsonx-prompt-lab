@@ -1,5 +1,5 @@
 ---
-title: Basics of Prompt Engineering
+title: The Basics of Prompt Engineering
 description: Lab-1 of Prompt Engineering
 logo: docs/images/ibm-blue-background.png
 ---
@@ -134,7 +134,7 @@ _Decoding_ is the process of finding the output sequence given the input sequenc
 
 An advantage of greedy decoding is that you will see reproducible results which can be useful for testing. Setting temperature to `0` in a sampling decoding approach gives the same variance as greedy decoding.
 
-Experiment with different parameter values, below is an example of what happens if we switch to the `Sampling` decoding approach:
+Experiment with different parameter values, below is an example of what happens if we switch to the `Sampling` decoding approach with IBM's `granite-13b-chat-v2` model: 
 
 ![img.png](../images/lab1/1.11-sampling.png)
 
