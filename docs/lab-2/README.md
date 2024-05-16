@@ -10,22 +10,22 @@ Complete the following exercises using watsonx.ai's Prompt Lab.
 
 - **Be curious!** Try different, smaller models: do you have to improve your prompt or change parameters to get a satisfactory output?
 - **Be creative!** Numbered or bulleted list? Feel free to interpret the exercise yourself and make the output look the way you want to.
-- **Be specific!** Perfect your output! Use descriptive language, examples, and parameters to perfect your output.
+- **Be specific!** Aim for perfection. Use descriptive language, examples, and parameters to perfect your output.
 
 **Exercises**
 
-| No. |                  Exercise                  |                          Summary                          |
-|-----|:------------------------------------------:|:---------------------------------------------------------:|
-| 1   |          [Generate](#1-generate)           |                 Write creative sentences                  |
-| 2   |           [Rewrite](#2-rewrite)            |                Transform Markdown to HTML                 |
-| 3   |         [Summarize](#3-summarize)          |                  Summarize a short story                  |
-| 4   |    [Summary Topics](#4-summary-points)     |         List the topics from a meeting transcript         |
-| 5   |   [Text Extraction](#6-text-extraction)    |               Extract verbs from a sentence               |
-| 6   |           [Compare](#7-compare)            |           Identify what passages have in common           |
-| 7   |       [Text Search](#8-text-search)        |             Find which page contains the text             |
-| 8   |          [Classify](#9-classify)           |                  Detect a users' intent                   |
-| 9  | [Anomaly Detection](#10-anomaly-detection) |                  Spot the odd entry out                   |
-| 10  |     [Math Question](#11-math-question)     | Solve a math question |
+| No. |                  Exercise                  |                  Summary                  |
+|-----|:------------------------------------------:|:-----------------------------------------:|
+| 1   |          [Generate](#1-generate)           |         Write creative sentences          |
+| 2   |           [Rewrite](#2-rewrite)            |        Transform Markdown to HTML         |
+| 3   |         [Summarize](#3-summarize)          |          Summarize a short story          |
+| 4   |    [Summary Topics](#4-summary-points)     | List the topics from a meeting transcript |
+| 5   |   [Text Extraction](#6-text-extraction)    |       Extract verbs from a sentence       |
+| 6   |           [Compare](#7-compare)            |   Identify what passages have in common   |
+| 7   |       [Text Search](#8-text-search)        |     Find which page contains the text     |
+| 8   |          [Classify](#9-classify)           |          Detect a users' intent           |
+| 9   | [Anomaly Detection](#10-anomaly-detection) |          Spot the odd entry out           |
+| 10  |     [Math Question](#11-math-question)     |           Solve a math question           |
 
 ## 1. Generate
 
