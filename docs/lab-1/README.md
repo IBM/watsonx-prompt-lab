@@ -160,6 +160,7 @@ When it comes to repetition, remember that sometimes our output requires some. F
 ### 3.1 Remember to try different models
 
 This lab was mainly demonstrated using a model that requires more effort out-of-the-box to highlight the improvements over time. Prompt Lab allows you to easily test many models quickly! The watsonx.ai documentation [here](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-models.html?context=wx&audience=wdp) lists and describes the available models.
+
 ### 3.2 Understand your use case
 
 LLMs have great potential, but they do not have logic, knowledge, or domain expertise. Some use cases are a better fit than others: LLMs excel at tasks that involve generating generic text or common code patterns and transforming given input.
@@ -182,4 +183,3 @@ The smaller, simpler models in watsonx.ai present a more difficult challenge for
 - [watsonx.ai](https://www.ibm.com/blog/ibm-watsonx-ai-open-source-pre-trained-foundation-models-make-ai-and-automation-easier-than-ever-before/)
 
 <img src="https://count.asgharlabs.io/count?p=/lab1_promptlab_page">
-
