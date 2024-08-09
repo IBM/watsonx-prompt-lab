@@ -26,9 +26,9 @@ In this workshop, you will learn the basics of prompt engineering, from monitori
 |:-----------------------------------------------------------|:--------------------------|
 | [Lab 0: Pre-work](pre-work/README.md)                      | Registration and Setup    |
 | [Lab 1: The Basics of Prompt Engineering](lab-1/README.md) | Introduction and Examples |
-| [Lab 2: The Basics of Prompt Engineering](lab-2/README.md) | Introduction and Examples |
+| [Lab 2: The Basics of Retrieval Augmented Generation](lab-2/README.md) | Introduction and Examples |
 | [Lab 3: Apply What You Learned](lab-3/README.md)           | Basic Exercises           |
-| [Lab 3: Go Further with RAGs](lab-4/README.md)             | Advanced Exercises         |
+| [Lab 4: Go Further with RAGs](lab-4/README.md)             | Advanced Exercises         |
 
 [//]: # (| [Lab 3: Think Outside of the Box]&#40;lab-3/README.md&#41;         | Advanced Exercises        |)
 
