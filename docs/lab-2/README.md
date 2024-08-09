@@ -14,7 +14,7 @@ RAG (retrieval-augmented generation) is the ability to retrieve facts from an ex
 This has multiple benefits.
 - Reduces hallucinations
 - Helps ensure the model has the most current, reliable facts
-- RAG also reduces the need to continiously retrain LLM models on new data, reducing time and cost
+- Reduces the need to continuously retrain LLM models on new data, reducing time and cost
 
 ![img.png](../images/lab2/2.1.0-groundingbutton.png)
 
