@@ -44,7 +44,7 @@ Note, the "Name" field will auto-fill based on the name of the document you add.
 
 ![img.png](../images/lab2/2.1.1-addfile.png)
 
-Click "Create"
+Click "Create".
 
 The chat interface then shows that it has the RAG (grounding data) appended as part of the chat:
 
