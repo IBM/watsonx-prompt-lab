@@ -40,7 +40,7 @@ TXT : Up to 5 MB
 
 Click on "Browse" and add the file `issue-36122.pdf` you downloaded earlier.
 
-Note, the Name will auto-fill based on the name of the document you add
+Note, the "Name" field will auto-fill based on the name of the document you add.
 
 ![img.png](../images/lab2/2.1.1-addfile.png)
 
