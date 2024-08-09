@@ -51,7 +51,7 @@ The chat interface then shows that it has the RAG (grounding data) appended as p
 ![img.png](../images/lab2/2.1.1-showchatwithgrounding.png)
 
 ### 1.2 Using the grounding data
-Now you can ask questions and the grounding data will be used to help complete the answer and will indicate the pages it used for the source.
+Now, you can ask questions and the grounding data will be used to help complete the answer and will indicate the pages it used from the source.
 
 For example, enter "Please summarize the issue" and you'll get something like this:
 
