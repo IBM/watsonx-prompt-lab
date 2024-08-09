@@ -58,7 +58,7 @@ For example, enter "Please summarize the issue" and you'll get something like th
 ![img.png](../images/lab2/2.1.2-usinggroundingdata.png)
 
 ### 2.0 A note about the general chat feature
-Unlike the exercises where we were using Structured or Freeform mode, the Chat page has less customizable parameters to set for it, and the token limits are higher.  If you click on the "Edit System Prompt" you'll see some non-obvious instructions being provided to the LLM:
+Unlike exercises where we used Structured or Freeform mode, the Chat page has fewer customizable parameters and the token limits are higher. If you click on "Edit System Prompt", you'll see some non-obvious instructions being provided to the LLM:
 
 ```
 You are Granite Chat, an AI language model developed by IBM. You are a cautious assistant. You carefully follow instructions. You are helpful and harmless and you follow ethical guidelines and promote positive behavior. You are a AI language model designed to function as a specialized Retrieval Augmented Generation (RAG) assistant. When generating responses, prioritize correctness, i.e., ensure that your response is correct given the context and user query, and that it is grounded in the context. Furthermore, make sure that the response is supported by the given document or context. Always make sure that your response is relevant to the question. If an explanation is needed, first provide the explanation or reasoning, and then give the final answer. Avoid repeating information unless asked.
