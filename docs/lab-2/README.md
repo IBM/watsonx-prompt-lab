@@ -38,7 +38,7 @@ DOCX: Up to 10 MB
 TXT : Up to 5 MB
 ```
 
-Click on Browse and add the `issue-36122.pdf` from your Downloads folder 
+Click on "Browse" and add the file `issue-36122.pdf` you downloaded earlier.
 
 Note, the Name will auto-fill based on the name of the document you add
 
