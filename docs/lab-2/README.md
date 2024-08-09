@@ -20,7 +20,7 @@ This has multiple benefits.
 
 <img src="https://count.asgharlabs.io/count?p=/lab2_promptlab_page">
 
-### 1.1 How to add grounding data:
+### 2.1 How to add grounding data:
 
 First, obtain the document you want to add.  For example, download to your laptop
 https://github.com/IBM/watsonx-prompt-lab/blob/main/docs/lab-2/issue-36122.pdf
