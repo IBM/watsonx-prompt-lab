@@ -1,0 +1,921 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Lab-1 of Prompt Engineering">
+      
+      
+        <meta name="author" content="IBM Developer">
+      
+      
+        <link rel="canonical" href="https://ibm.github.io/watsonx-prompt-lab/lab-1/">
+      
+      
+        <link rel="prev" href="../pre-work/">
+      
+      
+        <link rel="next" href="../lab-2/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>The Basics of Prompt Engineering - watsonx-prompt-lab</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="The Basics of Prompt Engineering - watsonx-prompt-lab" >
+      
+        <meta  property="og:description"  content="Lab-1 of Prompt Engineering" >
+      
+        <meta  property="og:image"  content="https://ibm.github.io/watsonx-prompt-lab/assets/images/social/lab-1/README.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://ibm.github.io/watsonx-prompt-lab/lab-1/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="The Basics of Prompt Engineering - watsonx-prompt-lab" >
+      
+        <meta  name="twitter:description"  content="Lab-1 of Prompt Engineering" >
+      
+        <meta  name="twitter:image"  content="https://ibm.github.io/watsonx-prompt-lab/assets/images/social/lab-1/README.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#basics-of-prompt-engineering" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="watsonx-prompt-lab" class="md-header__button md-logo" aria-label="watsonx-prompt-lab" data-md-component="logo">
+      
+  <img src="../images/ibm-blue-background.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            watsonx-prompt-lab
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Basics of Prompt Engineering
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ibm/watsonx-prompt-lab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    watsonx-prompt-lab
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  Welcome
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../pre-work/" class="md-tabs__link">
+          
+  
+  Workshop
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="watsonx-prompt-lab" class="md-nav__button md-logo" aria-label="watsonx-prompt-lab" data-md-component="logo">
+      
+  <img src="../images/ibm-blue-background.png" alt="logo">
+
+    </a>
+    watsonx-prompt-lab
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ibm/watsonx-prompt-lab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    watsonx-prompt-lab
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Welcome
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About the workshop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Workshop
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Workshop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pre-work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab 0. Pre-work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lab 1. The Basics of Prompt Engineering
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lab 1. The Basics of Prompt Engineering
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-llm-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0 LLM Foundations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Tokens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-everything-is-text-completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Everything is text completion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-cue-the-output-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Cue the output structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-provide-an-example-as-guidance-one-shot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Provide an example as guidance (One-Shot Prompting)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-include-descriptive-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 Include descriptive details
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab 2. Go Further with RAG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab 3. Apply What You Learned
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-llm-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0 LLM Foundations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Tokens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-everything-is-text-completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Everything is text completion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-cue-the-output-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Cue the output structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-provide-an-example-as-guidance-one-shot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Provide an example as guidance (One-Shot Prompting)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-include-descriptive-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 Include descriptive details
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="basics-of-prompt-engineering">Basics of Prompt Engineering<a class="headerlink" href="#basics-of-prompt-engineering" title="Permanent link">&para;</a></h1>
+<p><strong>Note:</strong> The following images show actual results from watsonx.ai. The gray text is what we provided to the model. The blue highlighted text is how the model responded.</p>
+<h3 id="10-llm-foundations">1.0 LLM Foundations<a class="headerlink" href="#10-llm-foundations" title="Permanent link">&para;</a></h3>
+<p>Before we jump into exploring the capabilities of Prompt Lab, we first need to lay a foundation for how Large Language Models (LLMs) work, and how we can tune the model and parameters to change their output. Gaining this understanding will make us more effective at prompt engineering.</p>
+<p><img alt="img.png" src="../images/lab1/1.1-free-form.png" /></p>
+<p>When you open up Prompt Lab and click the <code>Freeform</code> mode-option, this is what you will be shown. The large central text area is the prompt editor. On the right-side, you can display the model parameters that you can use to select to optimize how the model responds to your prompt. On the bottom-left a summary of the number of tokens used by your prompt during execution will display when we generate a response:</p>
+<p><img alt="img.png" src="../images/lab1/1.2-tokens.png" /></p>
+<h3 id="11-tokens">1.1 Tokens<a class="headerlink" href="#11-tokens" title="Permanent link">&para;</a></h3>
+<p>Each time you enter a prompt, your <strong>input</strong> tokens and <strong>generated</strong> tokens will update. Tokens are an important concept to understand as they constrain the performance of your model plus determine the cost of using models. As you will learn throughout the labs, tokens are not a 1:1 match with words in natural language. On average, one token is equal to 4 characters. Before sending your prompt to the model, the prompt's text is <em>tokenized</em> or broken into smaller subsets of characters better understood by a model.</p>
+<p>It is important to monitor your token usage to know how much information you are feeding into the model with each prompt, as well as how much text is generated for you. Depending on the model selected in Prompt Lab, you will see a max of 2048 or 4096 tokens. Keep in mind that the more expressive you are with your prompt instructions, the less room the model has to respond back to you.</p>
+<h3 id="12-everything-is-text-completion">1.2 Everything is text completion<a class="headerlink" href="#12-everything-is-text-completion" title="Permanent link">&para;</a></h3>
+<p>This is not a chatbot interface (check out the <code>Chat</code> view for that) and with many models, just specifying an instruction or question rarely produces a good result. For instance, what if we prompt the <code>flan-ul2-20b</code> model to
+list ideas to start some kind of coffee business?</p>
+<div class="highlight"><pre><span></span><code>Give ideas to start a coffee business
+</code></pre></div>
+<p><img alt="img.png" src="../images/lab1/1.3-simple.png" /></p>
+<p>Given our prompt, we were hoping for a little more information; but now we know that simple prompts don't work with all LLMs.</p>
+<h3 id="13-cue-the-output-structure">1.3 Cue the output structure<a class="headerlink" href="#13-cue-the-output-structure" title="Permanent link">&para;</a></h3>
+<p>To improve the response, we can start by addressing its structure. Our prompt might imply that we want the ideas in the structure of a list. Let's include a cue to start the response in the desired structure to nudge the model to provide us with a structured response. For example, let's add the two characters <code>1.</code> to the end of our original prompt:</p>
+<p><img alt="img.png" src="../images/lab1/1.4-numbered.png" /></p>
+<p>It might not be perfect, but note how dramatically the response changed and improved just by offering a couple of extra characters to the model.</p>
+<h3 id="14-provide-an-example-as-guidance-one-shot-prompting">1.4 Provide an example as guidance (One-Shot Prompting)<a class="headerlink" href="#14-provide-an-example-as-guidance-one-shot-prompting" title="Permanent link">&para;</a></h3>
+<p>Instead of just adding a couple of characters to cue the model, we can provide an entire example before generating. This is called <em>one-shot prompting</em>. Adding even more examples (i.e. <em>few-shot prompting</em>) into your prompt is common practice as well. Generally, increasing the number of examples is a powerful tool to ensure you generate better output.</p>
+<p>Let's test it out. To receive a higher-quality response, provide an example of the kind of response you want.</p>
+<div class="highlight"><pre><span></span><code>Give ideas to start a lemonade business:
+1. Set up a lemonade stand
+2. Partner with a restaurant
+3. Arrange for a celebrity to endorse the lemonade
+
+Give ideas to start a coffee business:
+</code></pre></div>
+<p><img alt="img.png" src="../images/lab1/1.5-one-shot.png" /></p>
+<h3 id="15-include-descriptive-details">1.5 Include descriptive details<a class="headerlink" href="#15-include-descriptive-details" title="Permanent link">&para;</a></h3>
+<p>Up until now, our prompts have been purposely vague to show the model improving as we improve our prompts. The more guidance, the better. Below, we add more detail to the prompt, such as the number of ideas we want and adjectives describing the business.</p>
+<div class="highlight"><pre><span></span><code>Give ideas to start a lemonade business:
+1. Set up a lemonade stand
+2. Partner with a restaurant
+3. Arrange for a celebrity to endorse the lemonade
+
+Give me 3 ideas to start my own successful, coffee shop business:
+</code></pre></div>
+<p><img alt="img.png" src="../images/lab1/1.6-descriptive.png" /></p>
+<p>Remember the first, incoherent response we received from this same model? With a few changes to our prompt, the response has improved to become much more coherent and helpful. Below, we'll learn more about all the other tweaks we can make to simple prompts like this to continue to improve the output. </p>
+<h1 id="the-model-and-its-parameters">The Model and its Parameters<a class="headerlink" href="#the-model-and-its-parameters" title="Permanent link">&para;</a></h1>
+<h3 id="16-adjusting-the-models-behaviour">1.6 Adjusting the model's behaviour<a class="headerlink" href="#16-adjusting-the-models-behaviour" title="Permanent link">&para;</a></h3>
+<p>The first change we can make is the model itself. This is one of the biggest changes you can make, as certain models are better suited for specific tasks. The exercises later on this lab will require you to change the model you use if you want to answer some of the more challenging questions.</p>
+<p>In general, some models perform better working with summarization, keywords, and semantics, while other models do better with structured text such as HTML, markdown, or JSON. The best way to figure out which models apply for your use case is to simply test them, but it is important to know that choice of model can make a big difference.</p>
+<p>Prompt Lab also provides multiple parameters for configuring how LLMs respond to a prompt.  Selecting the correct parameters can often be more of an art than a science, but investing time into understanding them will be rewarded by better responses.</p>
+<p>Explore these parameters using the same text from earlier:
+<div class="highlight"><pre><span></span><code>Give ideas to start a lemonade business:
+1. Set up a lemonade stand
+2. Partner with a restaurant
+3. Arrange for a celebrity to endorse the lemonade
+
+Give ideas to start a coffee business:
+1.
+</code></pre></div></p>
+<h3 id="17-set-the-min-and-max-tokens">1.7 Set the min and max tokens<a class="headerlink" href="#17-set-the-min-and-max-tokens" title="Permanent link">&para;</a></h3>
+<p>If you're finding the generated text is too short or too long, try adjusting the parameters that control the number of new tokens:</p>
+<ul>
+<li>The <code>Min tokens</code> parameter controls the minimum number of tokens in the generated response.</li>
+<li>The <code>Max tokens</code> parameter controls the maximum number of tokens in the generated response.</li>
+</ul>
+<p><img alt="img.png" src="../images/lab1/1.7-max-tokens.png" /></p>
+<h3 id="18-specify-stop-sequences">1.8 Specify stop sequences<a class="headerlink" href="#18-specify-stop-sequences" title="Permanent link">&para;</a></h3>
+<p>If you specify stop sequences, the output will automatically stop when one of them appears in the generated output.</p>
+<p>The example below (which is using the <code>granite-13b-chat-v2</code> model) shows an output that continues for longer than we want it to.</p>
+<p><img alt="img.png" src="../images/lab1/1.8-too-long.png" /></p>
+<p>To combat this behaviour, we can specify a stop sequence of two carriage returns:</p>
+<p><img alt="img.png" src="../images/lab1/1.9-stop-criteria.png" /></p>
+<p>Now, we have a more satisfying response. The output stops after two carriage returns:</p>
+<p><img alt="img.png" src="../images/lab1/1.10-stopped.png" /></p>
+<h3 id="19-adjust-decoding-parameters">1.9 Adjust decoding parameters<a class="headerlink" href="#19-adjust-decoding-parameters" title="Permanent link">&para;</a></h3>
+<p>If the response is too generic or going on wild tangents, consider adjusting the decoding parameters. Or conversely, the response may not be creative and varied enough.</p>
+<p><em>Decoding</em> is the process of finding the output sequence given the input sequence:</p>
+<ul>
+<li><em>Greedy decoding</em> selects the word with the highest probability at each step of the decoding process.</li>
+<li><em>Sampling decoding</em> selects words from a probability distribution at each step:</li>
+<li><em>Temperature</em> refers to selecting high- or low-probability words. Higher temperature values lead to more variability.</li>
+<li><em>Top-p</em> (nucleus sampling) refers to selecting the smallest set of words whose cumulative probability exceeds <em>p</em>.</li>
+<li><em>Top-k</em> refers to selecting <em>k</em> words with the highest probabilities at each step.  Higher values lead to more variability.</li>
+</ul>
+<p>An advantage of greedy decoding is that you will see reproducible results which can be useful for testing. Setting temperature to <code>0</code> in a sampling decoding approach gives the same variance as greedy decoding.</p>
+<p>Experiment with different parameter values, below is an example of what happens if we switch to the <code>Sampling</code> decoding approach with IBM's <code>granite-13b-chat-v2</code> model: </p>
+<p><img alt="img.png" src="../images/lab1/1.11-sampling.png" /></p>
+<h3 id="110-add-a-repetition-penalty">1.10 Add a repetition penalty<a class="headerlink" href="#110-add-a-repetition-penalty" title="Permanent link">&para;</a></h3>
+<p>Sometimes, you will see text being repeated over and over. For example, using the <code>flan-ul2-20b</code> model:</p>
+<p><code>List ideas to advertise my own successful, coffee shop business:</code></p>
+<p><img alt="img.png" src="../images/lab1/1.12-repetitive.png" /></p>
+<p>You could try to increase the temperature to resolve the problem, however, when text is still repetitive, you can also try to add a <em>repetition penalty</em>. The higher the penalty, the less likely the results will include repetitive text:</p>
+<p><img alt="img.png" src="../images/lab1/1.13-repetition-penalty.png" /></p>
+<p>When it comes to repetition, remember that sometimes our output requires some. For example, if you wanted a list using bullet points. In that case, penalizing repetition might work against you.</p>
+<h3 id="111-additional-reading-on-model-parameters-and-decoding-methods">1.11 Additional reading on model parameters and decoding methods<a class="headerlink" href="#111-additional-reading-on-model-parameters-and-decoding-methods" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.ibm.com/docs/en/watsonx-as-a-service?topic=lab-model-parameters-prompting">Foundation model parameters: decoding and stopping criteria</a></li>
+<li><a href="https://huggingface.co/blog/how-to-generate">Using different decoding methods</a></li>
+</ul>
+<h1 id="general-tips">General Tips<a class="headerlink" href="#general-tips" title="Permanent link">&para;</a></h1>
+<h3 id="112-remember-to-try-different-models">1.12 Remember to try different models<a class="headerlink" href="#112-remember-to-try-different-models" title="Permanent link">&para;</a></h3>
+<p>This lab was mainly demonstrated using a model that requires more effort out-of-the-box to highlight the improvements over time. Prompt Lab allows you to easily test many models quickly! The watsonx.ai documentation <a href="https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-models.html?context=wx&amp;audience=wdp">here</a> lists and describes the available models.</p>
+<h3 id="113-understand-your-use-case">1.13 Understand your use case<a class="headerlink" href="#113-understand-your-use-case" title="Permanent link">&para;</a></h3>
+<p>LLMs have great potential, but they do not have logic, knowledge, or domain expertise. Some use cases are a better fit than others: LLMs excel at tasks that involve generating generic text or common code patterns and transforming given input.</p>
+<p>If your prompt includes all the tips and best practices discussed here, yet you're not getting satisfactory results from any of the models, take time to consider whether LLMs actually suit your use case. For example, although we can get reasonable results for simple arithmetic, <a href="https://venturebeat.com/business/researchers-find-that-large-language-models-struggle-with-math/">LLMs generally cannot handle math well</a>.</p>
+<h3 id="114-balancing-intelligence-and-security">1.14 Balancing intelligence and security<a class="headerlink" href="#114-balancing-intelligence-and-security" title="Permanent link">&para;</a></h3>
+<p>With great artificial intelligence comes higher security risks. Solutions like ChatGPT are known as <em>Very Large language Models</em> (VLLMs) with 175 billion parameters. They are fine-tuned by the OpenAI team using an additional non-public Chat datasets along with Reinforcement Learning Human Feedback (RLHF) dataset. It is a chatbot-enabled LLM.</p>
+<p>In watsonx.ai, we are interacting directly with smaller LLMs (3-20 billion parameters). This is a wise choice with regard to security. Prompt injection is a major risk for enterprise-use of LLMs. In prompt injections, a hacker will create an intricate prompt in order to cause a LLM such as ChatGPT to ignore/bypass security protocols and reveal sensitive company information.</p>
+<p>For a moment, imagine you're a hacker. Which model would you choose to target for prompt injection hacking? OpenAI's ChatGPT with 175 billion parameters capable of thousands of tasks or a smaller, more-focused 3 billion parameter model highly tuned for a few isolated tasks?  Which has a larger attack surface for prompt (re-)engineering?</p>
+<p>The smaller, simpler models in watsonx.ai present a more difficult challenge for potential hackers. Using many small models rather than a single large one such as ChatGPT creates a wider distribution of sensitive entry points. Each small language model is much harder to manipulate due their limited functionality and high level of prompt engineering that was required to perform their primary tasks. They don’t have the wide range of functions a massive LLM would have.  As programmers know, putting all your resources into a single point of failure is unwise. It's far better to decompose your solution for security, scalability, and control.</p>
+<h1 id="further-learning">Further learning<a class="headerlink" href="#further-learning" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="https://www.ibm.com/docs/en/watsonx-as-a-service?topic=models-prompt-tips">Tips for Writing Foundation Model Prompts: Prompt Engineering</a></li>
+<li><a href="https://www.ibm.com/blog/ibm-watsonx-ai-open-source-pre-trained-foundation-models-make-ai-and-automation-easier-than-ever-before/">watsonx.ai</a></li>
+</ul>
+<p><img src="https://count.asgharlabs.io/count?p=/lab1_promptlab_page"></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 IBM Developer
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ibm" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/ibmdeveloper" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/ibm/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/user/developerworks" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://dev.to/ibmdeveloper" target="_blank" rel="noopener" title="dev.to" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M120.12 208.29c-3.88-2.9-7.77-4.35-11.65-4.35H91.03v104.47h17.45c3.88 0 7.77-1.45 11.65-4.35 3.88-2.9 5.82-7.25 5.82-13.06v-69.65c-.01-5.8-1.96-10.16-5.83-13.06zM404.1 32H43.9C19.7 32 .06 51.59 0 75.8v360.4C.06 460.41 19.7 480 43.9 480h360.2c24.21 0 43.84-19.59 43.9-43.8V75.8c-.06-24.21-19.7-43.8-43.9-43.8zM154.2 291.19c0 18.81-11.61 47.31-48.36 47.25h-46.4V172.98h47.38c35.44 0 47.36 28.46 47.37 47.28l.01 70.93zm100.68-88.66H201.6v38.42h32.57v29.57H201.6v38.41h53.29v29.57h-62.18c-11.16.29-20.44-8.53-20.72-19.69V193.7c-.27-11.15 8.56-20.41 19.71-20.69h63.19l-.01 29.52zm103.64 115.29c-13.2 30.75-36.85 24.63-47.44 0l-38.53-144.8h32.57l29.71 113.72 29.57-113.72h32.58l-38.46 144.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
