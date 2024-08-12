@@ -22,8 +22,8 @@ This has multiple benefits.
 
 ### 2.1 How to add grounding data:
 
-First, obtain the document you want to add.  For example, download to your laptop
-https://github.com/IBM/watsonx-prompt-lab/blob/main/docs/lab-2/issue-36122.pdf
+First, obtain the document you want to add.  You can download the example GitHub issue provided:
+[Issue-36122.pdf](https://github.com/IBM/watsonx-prompt-lab/blob/main/docs/lab-2/Issue-36122.pdf)
 
 Next, click on "Grounding with documents" and then click on "Select or create vector index" and then "New vector index"
 
@@ -38,7 +38,7 @@ DOCX: Up to 10 MB
 TXT : Up to 5 MB
 ```
 
-Click on "Browse" and add the file `issue-36122.pdf` you downloaded earlier.
+Click on "Browse" and add the file `Issue-36122.pdf` you downloaded earlier.
 
 Note, the "Name" field will auto-fill based on the name of the document you add.
 
@@ -50,14 +50,14 @@ The chat interface then shows that it has the RAG (grounding data) appended as p
 
 ![img.png](../images/lab2/2.1.1-showchatwithgrounding.png)
 
-### 1.2 Using the grounding data
+### 2.3 Using the grounding data
 Now, you can ask questions and the grounding data will be used to help complete the answer and will indicate the pages it used from the source.
 
 For example, enter "Please summarize the issue" and you'll get something like this:
 
-![img.png](../images/lab2/2.1.2-usinggroundingdata.png)
+![img.png](../images/lab2/2.3-usinggroundingdata.png)
 
-### 2.0 A note about the general chat feature
+### 2.4 A note about the general chat feature
 Unlike exercises where we used Structured or Freeform mode, the Chat page has fewer customizable parameters and the token limits are higher. If you click on "Edit System Prompt", you'll see some non-obvious instructions being provided to the LLM:
 
 ```
@@ -66,7 +66,7 @@ You are Granite Chat, an AI language model developed by IBM. You are a cautious 
 
 You can always customize this prompt as needed, but it serves as a good starting point for a well-behaved AI assistant.
 
-![img.png](../images/lab2/2.2-generalchatsettings.png)
+![img.png](../images/lab2/2.4-generalchatsettings.png)
 
 
 

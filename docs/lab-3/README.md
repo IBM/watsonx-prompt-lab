@@ -20,12 +20,13 @@ Complete the following exercises using watsonx.ai's Prompt Lab.
 | 2   |           [Rewrite](#2-rewrite)            |        Transform Markdown to HTML         |
 | 3   |         [Summarize](#3-summarize)          |          Summarize a short story          |
 | 4   |    [Summary Topics](#4-summary-points)     | List the topics from a meeting transcript |
-| 5   |   [Text Extraction](#6-text-extraction)    |       Extract verbs from a sentence       |
-| 6   |           [Compare](#7-compare)            |   Identify what passages have in common   |
-| 7   |       [Text Search](#8-text-search)        |     Find which page contains the text     |
-| 8   |          [Classify](#9-classify)           |          Detect a users' intent           |
-| 9   | [Anomaly Detection](#10-anomaly-detection) |          Spot the odd entry out           |
-| 10  |     [Math Question](#11-math-question)     |           Solve a math question           |
+| 5   |   [Text Extraction](#5-text-extraction)    |       Extract verbs from a sentence       |
+| 6   |           [Compare](#6-compare)            |   Identify what passages have in common   |
+| 7   |       [Text Search](#7-text-search)        |     Find which page contains the text     |
+| 8   |          [Classify](#8-classify)           |          Detect a users' intent           |
+| 9   | [Anomaly Detection](#9-anomaly-detection)  |          Spot the odd entry out           |
+| 10  |     [Math Question](#10-math-question)     |           Solve a math question           |
+| 11  |     [RAG Questions](#11-RAG-Questions)     |           Additional questions for RAG    |
 
 ## 1. Generate
 
@@ -54,7 +55,7 @@ You can use the examples below to help.
 <img src="../images/lab3/3.1-generate.png" alt="Answer" />
 </details>
 
-## 3. Rewrite
+## 2. Rewrite
 
 **Get a model to output the HTML version of the following Markdown snippets.**
 
@@ -410,7 +411,7 @@ Hi team how can i import data into a project?
 <img src="../images/lab3/3.8-classify.png" alt="Answer" />
 </details>
 
-## 9. Anomaly detection
+## 9. Anomaly Detection
 
 **Get the model to spot the odd entry out in any the following datasets.** 
 
@@ -446,7 +447,7 @@ Start by just identifying the outlier, then try to get the model to tell you bot
 <img src="../images/lab3/3.9-detect.png" alt="Answer" />
 </details>
 
-## 10. Math question
+## 10. Math Question
 
 **Prompt the model to deduce the answer to the question: _how many minutes are there in a day?_**
 
@@ -454,6 +455,19 @@ Start by just identifying the outlier, then try to get the model to tell you bot
 <summary> Show example answer </summary>
 <img src="../images/lab3/3.10-answer.png" alt="Answer" />
 </details>
+
+## 11. RAG Questions
+**What additional questions can be included for the example RAG issue?**
+```
+Conclusions that can be deduced from the issue
+Next set of actions to make progress on the issue
+A list of the key stakeholders and owners involved with the issue
+Any risks and dependencies related to the GitHub issue
+An ETA for delivery from the GitHub issue
+```
+
+Feel free to add your own PPTX (max of 300MB), PDF (max of 50MB), DOCX (max of 10MB), or TXT files (max of 5MB) as grounding data and experiement with your own questions.
+
 
 
 <img src="https://count.asgharlabs.io/count?p=/lab3_promptlab_page">
