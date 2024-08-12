@@ -28,6 +28,10 @@ It is important to monitor your token usage to know how much information you are
 This is not a chatbot interface (check out the `Chat` view for that) and with many models, just specifying an instruction or question rarely produces a good result. For instance, what if we prompt the `flan-ul2-20b` model to
 list ideas to start some kind of coffee business?
 
+```
+Give ideas to start a coffee business
+```
+
 ![img.png](../images/lab1/1.3-simple.png)
 
 Given our prompt, we were hoping for a little more information; but now we know that simple prompts don't work with all LLMs.
@@ -107,7 +111,7 @@ If you're finding the generated text is too short or too long, try adjusting the
 
 If you specify stop sequences, the output will automatically stop when one of them appears in the generated output.
 
-The example below shows an output that continues for longer than we probably want it to.
+The example below (which is using the `granite-13b-chat-v2` model) shows an output that continues for longer than we want it to.
 
 ![img.png](../images/lab1/1.8-too-long.png)
 
@@ -126,8 +130,8 @@ If the response is too generic or going on wild tangents, consider adjusting the
 
 _Decoding_ is the process of finding the output sequence given the input sequence:
 
-- _Greedy decoding_ selects the word with the highest probability at each step of the decoding process.
-- _Sampling decoding_ selects words from a probability distribution at each step:
+* _Greedy decoding_ selects the word with the highest probability at each step of the decoding process.
+* _Sampling decoding_ selects words from a probability distribution at each step:
   - _Temperature_ refers to selecting high- or low-probability words. Higher temperature values lead to more variability.
   - _Top-p_ (nucleus sampling) refers to selecting the smallest set of words whose cumulative probability exceeds _p_.
   - _Top-k_ refers to selecting _k_ words with the highest probabilities at each step.  Higher values lead to more variability.
@@ -140,7 +144,9 @@ Experiment with different parameter values, below is an example of what happens 
 
 ### 1.10 Add a repetition penalty
 
-Sometimes, you will see text being repeated over and over:
+Sometimes, you will see text being repeated over and over. For example, using the `flan-ul2-20b` model:
+
+`List ideas to advertise my own successful, coffee shop business:`
 
 ![img.png](../images/lab1/1.12-repetitive.png)
 
