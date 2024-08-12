@@ -1,15 +1,15 @@
 ---
-title: RAGs
+title: Go Further with RAG
 description: Lab-2 of Prompt Engineering
 logo: docs/images/ibm-blue-background.png
 ---
 
-# Learning about RAG (retrieval augmented generation)
+# Go Further with RAG (Retrieval Augmented Generation)
 
 **Note:** The following images show actual results from watsonx.ai. The gray text is what we provided to the model. The blue highlighted text is how the model responded.
 
 ### 2.0 LLM RAG
-RAG (retrieval-augmented generation) is the ability to retrieve facts from an external source to help ground LLMs and provide users detailed or updated information that otherwise might be missing in the LLM. It supplements the LLM's internal representation of information.
+RAG (Retrieval-Augmented Generation) is the ability to retrieve facts from an external source to help ground LLMs and provide users detailed or updated information that otherwise might be missing in the LLM. It supplements the LLM's internal representation of information.
 
 This has multiple benefits.
 - Reduces hallucinations

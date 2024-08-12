@@ -15,8 +15,8 @@ nav:
   - Workshop:
     - Lab 0. Pre-work: pre-work/README.md
     - Lab 1. The Basics of Prompt Engineering: lab-1/README.md
-    - Lab 2. Retrieval Augmented Generation: lab-2/README.md
-    - Lab 3. Apply What Your Learned: lab-3/README.md
+    - Lab 2. Go Further with RAG: lab-2/README.md
+    - Lab 3. Apply What You Learned: lab-3/README.md
 #    - Lab 4. Advanced Exercises with Rag: lab-4/README.md
 
 ## DO NOT CHANGE BELOW THIS LINE
