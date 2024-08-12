@@ -22,7 +22,7 @@ This has multiple benefits.
 
 ### 2.1 How to add grounding data:
 
-First, obtain the document you want to add.  For example, download to your laptop the following github issue example:
+First, obtain the document you want to add.  You can download the example GitHub issue provided:
 [Issue-36122.pdf](https://github.com/IBM/watsonx-prompt-lab/blob/main/docs/lab-2/Issue-36122.pdf)
 
 Next, click on "Grounding with documents" and then click on "Select or create vector index" and then "New vector index"

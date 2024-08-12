@@ -26,7 +26,7 @@ Complete the following exercises using watsonx.ai's Prompt Lab.
 | 8   |          [Classify](#8-classify)           |          Detect a users' intent           |
 | 9   | [Anomaly Detection](#9-anomaly-detection)  |          Spot the odd entry out           |
 | 10  |     [Math Question](#10-math-question)     |           Solve a math question           |
-| 11  |     [Math Question](#11-RAG-Questions)     |           Additional questions for RAG    |
+| 11  |     [RAG Questions](#11-RAG-Questions)     |           Additional questions for RAG    |
 
 ## 1. Generate
 
@@ -457,8 +457,7 @@ Start by just identifying the outlier, then try to get the model to tell you bot
 </details>
 
 ## 11. RAG Questions
-Additional questions for the example RAG issue:?
-
+**What additional questions can be included for the example RAG issue?**
 ```
 Conclusions that can be deduced from the issue
 Next set of actions to make progress on the issue
