@@ -146,6 +146,8 @@ Experiment with different parameter values, below is an example of what happens 
 
 Sometimes, you will see text being repeated over and over. For example, using the `flan-ul2-20b` model:
 
+`List ideas to advertise my own successful, coffee shop business:`
+
 ![img.png](../images/lab1/1.12-repetitive.png)
 
 You could try to increase the temperature to resolve the problem, however, when text is still repetitive, you can also try to add a _repetition penalty_. The higher the penalty, the less likely the results will include repetitive text:
