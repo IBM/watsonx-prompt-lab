@@ -76,7 +76,7 @@ Remember the first, incoherent response we received from this same model? With a
 
 # The Model and its Parameters
 
-### 2.0 Adjusting the model's behaviour
+### 1.6 Adjusting the model's behaviour
 The first change we can make is the model itself. This is one of the biggest changes you can make, as certain models are better suited for specific tasks. The exercises later on this lab will require you to change the model you use if you want to answer some of the more challenging questions.
 
 In general, some models perform better working with summarization, keywords, and semantics, while other models do better with structured text such as HTML, markdown, or JSON. The best way to figure out which models apply for your use case is to simply test them, but it is important to know that choice of model can make a big difference.
@@ -94,7 +94,7 @@ Give ideas to start a coffee business:
 1.
 ```
 
-### 2.1 Set the min and max tokens
+### 1.7 Set the min and max tokens
 
 If you're finding the generated text is too short or too long, try adjusting the parameters that control the number of new tokens:
 
@@ -103,7 +103,7 @@ If you're finding the generated text is too short or too long, try adjusting the
 
 ![img.png](../images/lab1/1.7-max-tokens.png)
 
-### 2.2 Specify stop sequences
+### 1.8 Specify stop sequences
 
 If you specify stop sequences, the output will automatically stop when one of them appears in the generated output.
 
@@ -120,7 +120,7 @@ Now, we have a more satisfying response. The output stops after two carriage ret
 ![img.png](../images/lab1/1.10-stopped.png)
 
 
-### 2.3 Adjust decoding parameters
+### 1.9 Adjust decoding parameters
 
 If the response is too generic or going on wild tangents, consider adjusting the decoding parameters. Or conversely, the response may not be creative and varied enough.
 
@@ -138,7 +138,7 @@ Experiment with different parameter values, below is an example of what happens 
 
 ![img.png](../images/lab1/1.11-sampling.png)
 
-### 2.4 Add a repetition penalty
+### 1.10 Add a repetition penalty
 
 Sometimes, you will see text being repeated over and over:
 
@@ -150,24 +150,24 @@ You could try to increase the temperature to resolve the problem, however, when 
 
 When it comes to repetition, remember that sometimes our output requires some. For example, if you wanted a list using bullet points. In that case, penalizing repetition might work against you.
 
-### 2.5 Additional reading on model parameters and decoding methods
+### 1.11 Additional reading on model parameters and decoding methods
 
 - [Foundation model parameters: decoding and stopping criteria](https://www.ibm.com/docs/en/watsonx-as-a-service?topic=lab-model-parameters-prompting)
 - [Using different decoding methods](https://huggingface.co/blog/how-to-generate)
 
 # General Tips
 
-### 3.1 Remember to try different models
+### 1.12 Remember to try different models
 
 This lab was mainly demonstrated using a model that requires more effort out-of-the-box to highlight the improvements over time. Prompt Lab allows you to easily test many models quickly! The watsonx.ai documentation [here](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-models.html?context=wx&audience=wdp) lists and describes the available models.
 
-### 3.2 Understand your use case
+### 1.13 Understand your use case
 
 LLMs have great potential, but they do not have logic, knowledge, or domain expertise. Some use cases are a better fit than others: LLMs excel at tasks that involve generating generic text or common code patterns and transforming given input.
 
 If your prompt includes all the tips and best practices discussed here, yet you're not getting satisfactory results from any of the models, take time to consider whether LLMs actually suit your use case. For example, although we can get reasonable results for simple arithmetic, [LLMs generally cannot handle math well](https://venturebeat.com/business/researchers-find-that-large-language-models-struggle-with-math/).
 
-# Balancing intelligence and security
+### 1.14 Balancing intelligence and security
 With great artificial intelligence comes higher security risks. Solutions like ChatGPT are known as _Very Large language Models_ (VLLMs) with 175 billion parameters. They are fine-tuned by the OpenAI team using an additional non-public Chat datasets along with Reinforcement Learning Human Feedback (RLHF) dataset. It is a chatbot-enabled LLM.
 
 In watsonx.ai, we are interacting directly with smaller LLMs (3-20 billion parameters). This is a wise choice with regard to security. Prompt injection is a major risk for enterprise-use of LLMs. In prompt injections, a hacker will create an intricate prompt in order to cause a LLM such as ChatGPT to ignore/bypass security protocols and reveal sensitive company information.
