@@ -19,14 +19,14 @@ Complete the following exercises using watsonx.ai's Prompt Lab.
 | 1   |          [Generate](#1-generate)           |         Write creative sentences          |
 | 2   |           [Rewrite](#2-rewrite)            |        Transform Markdown to HTML         |
 | 3   |         [Summarize](#3-summarize)          |          Summarize a short story          |
-| 4   |    [Summary Topics](#4-summary-points)     | List the topics from a meeting transcript |
+| 4   |    [Summary Topics](#4-summary-topics)     | List the topics from a meeting transcript |
 | 5   |   [Text Extraction](#5-text-extraction)    |       Extract verbs from a sentence       |
 | 6   |           [Compare](#6-compare)            |   Identify what passages have in common   |
 | 7   |       [Text Search](#7-text-search)        |     Find which page contains the text     |
 | 8   |          [Classify](#8-classify)           |          Detect a users' intent           |
 | 9   | [Anomaly Detection](#9-anomaly-detection)  |          Spot the odd entry out           |
 | 10  |     [Math Question](#10-math-question)     |           Solve a math question           |
-| 11  |     [RAG Questions](#11-RAG-Questions)     |           Additional questions for RAG    |
+| 11  |     [RAG](#11-rag)     |           Additional questions for RAG    |
 
 ## 1. Generate
 
@@ -456,7 +456,7 @@ Start by just identifying the outlier, then try to get the model to tell you bot
 <img src="../images/lab3/3.10-answer.png" alt="Answer" />
 </details>
 
-## 11. RAG Questions
+## 11. RAG
 **What additional questions can be included for the example RAG issue?**
 ```
 Conclusions that can be deduced from the issue
